@@ -2,30 +2,37 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #81181B; /* Ensure the body background matches the navbar */
+  background-color: #fff;
 }
+
+header {
+  color: #81181B;
+}
+
 .navbar {
-  overflow: visible;
-  display: block;
-  background-color: #81181B;
+  overflow: hidden;
+  background-color: #81181B; /* Apply background color to the entire navbar */
+  padding: 10px 0; /* Adjust padding as needed */
 }
+
 .logo-space {
   float: left;
   margin-top: 20px;
-  width: 100px; /* Width of the logo space */
-  height: 50px; /* Height of your logo */
+  width: 150px; /* Increase the width as desired */
+  height: 75px; /* Increase the height as desired */
   background-size: contain;
+  background-repeat: no-repeat; /* Add this to prevent the logo from repeating */
 }
+
 .navbar a, .dropbtn {
-  margin-top: 35px;
   float: left;
   font-size: 16px;
+  margin-top: 20px;
   color: white;
   text-align: center;
   padding: 14px 19px;
   text-decoration: none;
   display: block;
-  background-color: #81181B; /* Re-apply the background color to each link */
 }
 .dropbtn {
   background-color: #81181B;
@@ -61,39 +68,6 @@ body {
   color: grey;
   background-color: #81181B; /* Keep the hover background color unchanged */
 }
-  .header {
-    background-color: maroon;
-    color: white;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
-  }
-  .university-logo {
-    margin-left: 20px;
-  }
-  .university-logo img {
-    height: 80px; /* Adjust as needed */
-  }
-  .navigation {
-    display: flex;
-    list-style-type: none;
-    margin-right: 20px;
-  }
-  .navigation li {
-    padding: 0 15px;
-    font-size: 14px;
-  }
-  .navigation li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-  }
-  .navigation li a:hover {
-    color: #aaa;
-  }
-
-  
   .hero-section {
   text-align: center;
   background-image: url('./images/1-2048x1365.jpg');

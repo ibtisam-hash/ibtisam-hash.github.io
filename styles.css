@@ -1,70 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #81181B; /* Ensure the body background matches the navbar */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
 }
+
+header {
+  color: #81181B;
+}
+
 .navbar {
-    overflow: visible;
-    background-color: #81181B;
+  overflow: hidden;
+  background-color: #81181B; /* Apply background color to the entire navbar */
+  padding: 10px 0; /* Adjust padding as needed */
 }
+
 .logo-space {
-    float: left;
-    margin-top: 20px;
-    width: 100px; /* Width of the logo space */
-    height: 50px; /* Height of your logo */
-    background-size: contain;
+  float: left;
+  margin-top: 20px;
+  width: 150px; /* Increase the width as desired */
+  height: 75px; /* Increase the height as desired */
+  background-size: contain;
+  background-repeat: no-repeat; /* Add this to prevent the logo from repeating */
 }
+
 .navbar a, .dropbtn {
-    margin-top: 35px;
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 19px;
-    text-decoration: none;
-    display: block;
-    background-color: #81181B; /* Re-apply the background color to each link */
+  float: left;
+  font-size: 16px;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 19px;
+  text-decoration: none;
+  display: block;
 }
 .dropbtn {
-    background-color: #81181B;
-    border: none;
-    cursor: pointer;
+  background-color: #81181B;
+  border: none;
+  cursor: pointer;
 }
 .dropdown {
-    float: left;
-    position: relative;
+  float: left;
+  position: relative;
 }
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #81181B; /* Match the dropdown content background to the navbar */
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    left: 0;
-    top: 100%;
+  display: none;
+  position: absolute;
+  background-color: #81181B; /* Match the dropdown content background to the navbar */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 0;
+  top: 100%;
 }
 .dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 .navbar a:hover, .dropdown:hover .dropbtn {
-    color: grey;
-    background-color: #81181B; /* Keep the hover background color unchanged */
+  color: grey;
+  background-color: #81181B; /* Keep the hover background color unchanged */
 }
 
 .slider {
     position: relative;
     width: 100%; /* Slider takes the full width of its container */
-    margin-top: 20px;
+    margin-top: 0px;
     overflow: hidden; /* Ensures no content spills outside the slider area */
 }
 
@@ -452,7 +460,7 @@ body {
   
   .our-mission h2, .our-team h2, .our-initiatives h2, .our-impact h2 {
     font-size: 2em;
-    color: #81181B; /* Matching the color to the footer */
+    color: #fff; /* Matching the color to the footer */
     margin-bottom: 15px;
   }
   

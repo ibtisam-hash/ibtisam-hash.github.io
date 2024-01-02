@@ -6,6 +6,8 @@
 <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
 
@@ -33,7 +35,70 @@
         <a href="feedback.html">Feedback</a>
         <a href="contact.html">Contact Us</a>
       </div>
-
+      <div class="bg-white border rounded-lg px-8 py-6 mx-auto my-8 max-w-2xl">
+        <h2 class="text-2xl font-medium mb-4 text-center">Feedback</h2>
+        <form>
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                <input type="text" id="name" name="name"
+                    class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" requiYes>
+            </div>
+            <div class="mb-4">
+                <label for="reg-num" class="block text-gray-700 font-medium mb-2">Reg Number</label>
+                <input type="integer" id="reg" name="reg"
+                    class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" required>
+            </div>
+            <div class="mb-4">
+                <label for="Program" class="block text-gray-700 font-medium mb-2">Program</label>
+                <select id="Program" name="Program"
+                    class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" required>
+                    <option value="">Select Program</option>
+                    <option value="male">CS</option>
+                    <option value="female">SE</option>
+                    <option value="other">BBA</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-medium mb-2">Did you use any services offered by the CSCR office?</label>
+                <div class="flex flex-wrap -mx-2">
+                    <div class="px-2 w-1/3">
+                        <label for="color-red" class="block text-gray-700 font-medium mb-2">
+                            <input type="radio" id="yes" name="yes" value="Yes" class="mr-2">Yes
+                        </label>
+                    </div>
+                    <div class="px-2 w-1/3">
+                        <label for="no" class="block text-gray-700 font-medium mb-2">
+                            <input type="radio" id="No" name="no" value="No" class="mr-2">No
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-medium mb-2">Did you achieve your goal?</label>
+                <div class="flex flex-wrap -mx-2">
+                  <div class="px-2 w-1/3">
+                      <label for="color-red" class="block text-gray-700 font-medium mb-2">
+                          <input type="radio" id="yes" name="yes" value="Yes" class="mr-2">Yes
+                      </label>
+                  </div>
+                  <div class="px-2 w-1/3">
+                      <label for="no" class="block text-gray-700 font-medium mb-2">
+                          <input type="radio" id="No" name="no" value="No" class="mr-2">No
+                      </label>
+                  </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                <textarea id="message" name="message"
+                    class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-blue-400" rows="5"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Submit</button>
+            </div>
+    
+        </form>
+    </div>
 
       <footer class="site-footer">
         <div class="footer-content">
