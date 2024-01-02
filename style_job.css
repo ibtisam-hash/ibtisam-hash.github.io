@@ -1,1 +1,542 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    background-color: maroon;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+  .university-logo {
+    margin-left: 20px;
+  }
+  .university-logo img {
+    height: 80px; /* Adjust as needed */
+  }
+  .navigation {
+    display: flex;
+    list-style-type: none;
+    margin-right: 20px;
+  }
+  .navigation li {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+  .navigation li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  .navigation li a:hover {
+    color: #aaa;
+  }
+
+  
+  .hero-section {
+    position: relative;
+  text-align: center;
+  background-image: url('./images/1-2048x1365.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px; /* Adjust padding as needed */
+
+  }
+  
+  .hero-content {
+    color: white;
+    max-width: 800px; /* Adjust width as needed */
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 50px; /* Space for the search container */
+  }
+  
+  h1 {
+   
+  margin-bottom: 22px;
+  color: rgba(97, 92, 92, 0.703);
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+
+  }
+  
+  p {
+    font-size: 1.2em; /* Adjust font-size as needed */
+    margin-bottom: 10px;
+    color: white;
+    
+  }
+
+  .search-container {
+   
+  background: maroon; /* Slight transparency to show image */
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto 0; /* Centers the container and adds space at the top */
+  width: 80%; /* Adjust as per your design */
+  max-width: 600px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin: 0 0px;
+}
+
+.form-group label {
+    margin-right: 5px;
+}
+
+
+
+.divider {
+    height: 24px;
+    width: 1px;
+    background-color: #ccc;
+}
+
+select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.search-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 5%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color:gray;
+}
+
+/* 
+.card-container {
+  
+  margin-left: 50px;
+  margin-right: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    /* display: block; */
+  
+  
+  .card h3 {
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 15px;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .card p {
+    padding: 15px;
+    color: #555;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  .card h3 {
+    background-color: #f7f7f7; /* Replace with your preferred color */
+    color: #333;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.25rem; /* Adjust font size as needed */
+  }
+  
+  .card p {
+    padding: 10px;
+    color: #555;
+    margin: 0;
+    font-size: 1rem; /* Adjust font size as needed */
+  } */
+
+  
+  .mainHeading {
+    font-size: 50px;
+    background-color: #81181B;
+    text-align: center; /* Centers the text */
+    font-weight: bold; /* Makes the text bold */
+    margin-top: 40%; /* Adds space between the image and the h2 heading */
+    margin-left: 35%;
+    margin-bottom: 40%;
+    align-items: center;
+  }
+  
+  
+
+/* Add any additional styles for responsiveness or theming */
+
+
+.site-footer {
+  background-color: #81181B; /* Dark red background color */
+  color: #ffffff; /* White text color */
+  padding: 40px 0;
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* Allows the columns to wrap on smaller screens */
+  max-width: 1200px; /* Max width of the footer content */
+  margin: auto;
+}
+
+.footer-section {
+  margin: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.2em; /* Larger font size for headings */
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  line-height: 1.6; /* Spacing between lines */
+  margin-bottom: 10px; /* Spacing between list items */
+}
+
+.footer-section ul li a {
+  color: #ffffff; /* White text color for links */
+  text-decoration: none; /* Removes underline from links */
+  transition: color 0.3s ease; /* Transition for link color change on hover */
+}
+
+.footer-section ul li a:hover {
+  color: #dddddd; /* Light grey color on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px; /* Space above the copyright text */
+}
+
+.footer-bottom p {
+  margin: 0; /* Removes default margin from paragraph */
+  color: #cccccc; /* Light grey color for the copyright text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 10px 0; /* Reduced margin for mobile */
+  }
+}
+
+/* Additional styles for the COVID updates button if present in the footer */
+.covid-updates-button {
+  text-align: center; /* Center the button if it's full width */
+  padding: 20px 0; /* Space above and below the button */
+}
+
+.covid-updates-button a {
+  background-color: #000; /* Black background for the button */
+  color: #ffffff; /* White text color for the button */
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded corners for the button */
+  text-decoration: none; /* Removes underline from links */
+  transition: background-color 0.3s ease; /* Transition for background color change on hover */
+}
+
+.covid-updates-button a:hover {
+  background-color: #555555; /* Dark grey background on hover */
+}
+body {
+    font-family: Arial, sans-serif;
+    color: maroon;
+    background-color: white;
+}
+
+/* start */
+.categories {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.category {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 5px;
+  flex-basis: calc(16.666% - 10px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.category .icon {
+  margin-bottom: 8px;
+}
+
+.category .icon img {
+
+  width: 40%
+  height:50px;
+}
+
+.category .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.category .open-positions {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Custom colors for categories */
+.category:nth-child(1) { background-color: maroon; }
+.category:nth-child(2) { background-color: maroon; }
+.category:nth-child(3) { background-color: maroon; }
+.category:nth-child(4) { background-color: maroon; }
+.category:nth-child(5) { background-color: maroon; }
+.category:nth-child(6) { background-color: maroon; }
+
+.category:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+  }
+  .category {
+    flex-basis: auto;
+    margin-bottom: 15px;
+  }
+}
+/* end */
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: maroon; /* Adjust the color to match the uploaded image */
+  padding: 50px 0;
+}
+
+.feature-item {
+  text-align: center;
+  color: white;
+  max-width: 20%; /* Adjust width based on your layout */
+}
+
+.feature-icon {
+  background-color: white;
+  border-radius: 50%;
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  padding: 20px;
+  margin-bottom: 20px;
+  /* Add a box-shadow or border if needed */
+}
+
+.feature-title {
+  font-size: 24px; /* Adjust font-size as needed */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feature-description {
+  font-size: 16px; /* Adjust font-size as needed */
+  margin: 0 auto;
+  line-height: 1.4;
+  /* Set a max-width if descriptions are long */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+  .feature-item {
+    max-width: 80%; /* Adjust width based on your layout */
+    margin-bottom: 30px;
+  }
+}
+.job-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #F8F8F8; /* Adjust the color to match your design */
+}
+
+.job-listing {
+  width: 70%;
+}
+
+.job-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.job-type {
+  background-color: #E0E0E0; /* Adjust the color to match your design */
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.job-title {
+  flex-grow: 1;
+  font-size: 18px;
+}
+
+.job-details {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.company-name, .job-location {
+  display: block;
+}
+
+.apply-btn {
+  background-color: #007BFF; /* Adjust the button color to match your design */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3; /* Darker shade for hover state */
+}
+
+.top-recruitments {
+  width: 25%;
+  text-align: center;
+}
+
+.top-recruitments .company-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.top-recruitments .company-name {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.top-recruitments .open-positions {
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .job-section {
+    flex-direction: column;
+  }
+  
+  .job-listing, .top-recruitments {
+    width: 100%;
+  }
+}
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: maroon; /* Adjust the background color to match your design */
+  color: #fff; /* Adjust the text color to match your design */
+  padding: 20px 40px; /* Adjust the padding to match your design */
+}
+
+.subheading {
+  font-size: 14px; /* Adjust the font size to match your design */
+  margin-bottom: 5px; /* Adjust the spacing to match your design */
+  letter-spacing: 1px; /* Adjust the letter spacing to match your design */
+  text-transform: uppercase; /* Makes the text uppercase */
+}
+
+.main-heading {
+  font-size: 36px; /* Adjust the font size to match your design */
+  font-weight: bold; /* Makes the font bold */
+  margin: 0; /* Resets the margin */
+}
+
+.top-recruitments {
+  text-align: right; /* Aligns the text to the right */
+}
+
+/* You may need to add media queries to ensure the layout is responsive */
+@media (max-width: 768px) {
+  .heading-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .top-recruitments {
+    margin-top: 20px; /* Adds space between the headings on smaller screens */
+    text-align: left; /* Aligns the text to the left on smaller screens */
+  }
+}
+
+
+
+
+
 
