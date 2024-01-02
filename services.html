@@ -6,6 +6,43 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
+
+    <style>
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #790000; 
+    color: #fff;
+    padding-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    
+    display: none;
+    border: none;
+    border-radius: 4px;
+   
+}
+
+/* Style for the arrow icon */
+.scroll-to-top::before {
+    content: "\2191"; /* Unicode arrow-up character */
+    font-size: 20px;
+}
+#abc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divider {
+    width: 95%;
+    margin: 20px auto;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #6c0000, transparent);
+}
+    </style>
 </head>
 <body>
     <header style="background-color: brown;color: white;" class=" body-font">
@@ -16,7 +53,7 @@
           
             <span style="color: white;font-size: 28px;font-weight: 700;" class="ml-3 text-xl">DHA Suffa University</span>
           </a>
-     <nav style="font-size: 16px;" class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          <nav style="font-size: 16px;" class="md:ml-auto flex flex-wrap items-center text-base justify-center">
             <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
             <a href="about.html" class="mr-5 hover:text-gray-900">About Us</a>
             <a href="services.html" class="mr-5 hover:text-gray-900">Services</a>
