@@ -1,0 +1,522 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #81181B; /* Ensure the body background matches the navbar */
+}
+.navbar {
+    overflow: visible;
+    background-color: #81181B;
+}
+.logo-space {
+    float: left;
+    margin-top: 20px;
+    width: 100px; /* Width of the logo space */
+    height: 50px; /* Height of your logo */
+    background-size: contain;
+}
+.navbar a, .dropbtn {
+    margin-top: 35px;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #81181B; /* Re-apply the background color to each link */
+}
+.dropbtn {
+    background-color: #81181B;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    float: left;
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #81181B; /* Match the dropdown content background to the navbar */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    top: 100%;
+}
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+    color: grey;
+    background-color: #81181B; /* Keep the hover background color unchanged */
+}
+
+.slider {
+    position: relative;
+    width: 100%; /* Slider takes the full width of its container */
+    margin-top: 20px;
+    overflow: hidden; /* Ensures no content spills outside the slider area */
+}
+
+.slides {
+    display: flex;
+    align-items: center; /* This will vertically center the slides if there's extra space */
+    justify-content: center; /* Center slides horizontally */
+    transition: transform 0.5s ease; /* Smooth transition for the slide movement */
+    width: 300%;
+}
+
+.slide {
+    flex: 0 0 33.3333%; /* Each slide should take up 100% of the width of the slider */
+    transition: transform 0.5s ease-in-out;
+    display: flex; /* Use flexbox to align the image properly */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (if needed, you can adjust this for positioning) */
+}
+
+.slide img {
+    width: 100%; /* Image takes the full width of the slide */
+    height: auto; /* Height is adjusted automatically to maintain aspect ratio */
+    object-fit: contain; /* This will cover the area of the slide, potentially cropping the image */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    padding: 16px;
+    z-index: 2;
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.news-section {
+    background-color: #81181B; /* Adjust the color to match your design */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .news-section h2 {
+    color: #fff; /* Dark text for the heading */
+    margin-bottom: 20px;
+  }
+  
+  .news-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap to your preference */
+  }
+  
+  .news-item {
+    width: 30%; /* Adjust the width based on how many items per row */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a subtle shadow to each item */
+    overflow: hidden; /* This ensures that the image doesn't spill outside the border-radius */
+    margin-bottom: 20px; /* Adds space below each news item */
+}
+
+  .news-item img {
+    width: 100%; /* Make the image fill the width of its container */
+    height: 200px; /* Set a fixed height, or adjust as needed */
+    object-fit: cover; /* This will cover the area, cropping the image if necessary */
+    border-radius: 5px; /* Optional: rounds the corners of the images */
+  }
+  
+  
+  .news-item h3 {
+    color: #fff; /* Dark text for news title */
+    font-size: 1em;
+  }
+  
+  .news-item p {
+    color: #666666; /* Lighter text for the description */
+    font-size: 0.9em;
+  }
+  
+  .more-news-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff; /* Button color */
+    color: #81181B; /* Button text color */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px; /* Optional: rounds the corners of the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .more-news-btn:hover {
+    color: #555555; /* Darker button color on hover */
+  }
+
+  .events-section {
+    background-color: #fff; /* Adjust the color to match the body's background */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .events-section h2 {
+    color: #81181B; /* Adjust for better contrast against the body's background color */
+    margin-bottom: 20px;
+  }
+  
+  .events-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap to your preference */
+  }
+  
+  .event-item {
+    width: 30%; /* Adjust the width based on how many items per row */
+    overflow: hidden; /* This ensures that the image doesn't spill outside the border-radius */
+    margin-bottom: 20px; /* Adds space below each event item */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a subtle shadow to each item */
+  }
+  
+  .event-item img {
+    width: 100%; /* Make the image fill the width of its container */
+    height: 200px; /* Set a fixed height, or adjust as needed */
+    object-fit: cover; /* This will cover the area, cropping the image if necessary */
+    border-radius: 5px; /* Optional: rounds the corners of the images */
+  }
+  
+  .event-item h3 {
+    color: #000; /* Light text for event title */
+    font-size: 1em;
+  }
+  
+  .event-item p {
+    color: #000; /* Lighter text for the description */
+    font-size: 0.9em;
+  }
+  
+  .more-events-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #81181B; /* Button color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px; /* Optional: rounds the corners of the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .more-events-btn:hover {
+    color: #555555; /* Darker button color on hover */
+  }
+  
+
+  .corporate-partners {
+    background-color: #81181B;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .corporate-partners h2 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .logo-slider {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .logo-slide {
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .logo-slide img {
+    max-width: 25%; /* Each logo takes up 1/4th of the slide */
+    max-height: 100px; /* Adjust the height as necessary */
+    object-fit: contain;
+    padding: 10px; /* Adds some space around the logos */
+  }
+  
+  .prev-logo, .next-logo {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    z-index: 100;
+  }
+  
+  .prev-logo {
+    left: 0;
+  }
+  
+  .next-logo {
+    right: 0;
+  }
+
+
+  .what-we-do {
+    text-align: center;
+    background-color: #fff; /* White background */
+    padding: 40px 20px;
+  }
+  
+  .what-we-do h2 {
+    font-size: 2em;
+    color: #333; /* Dark color for the heading */
+    margin-bottom: 30px;
+  }
+  
+  .programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 0;
+    list-style: none;
+  }
+  
+  .program-item {
+    background-color: #f0f0f0; /* Light grey background for each item */
+    border-radius: 10px; /* Rounded corners for the program boxes */
+    overflow: hidden; /* Ensures contents stay within the border radius */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .program-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  }
+  
+  .program-item img {
+    width: 100%; /* Ensure the image takes up the full container width */
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Crop to cover the container */
+    margin-bottom: 20px;
+  }
+  
+  .program-item h3 {
+    color: #333; /* Dark color for the program titles */
+    margin-bottom: 10px;
+  }
+  
+  .program-item p {
+    color: #666; /* Grey color for the description */
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+  
+  .program-item a {
+    color: #0066cc; /* Blue color for the read more links */
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .site-footer {
+    background-color: #81181B; /* Dark red background color */
+    color: #ffffff; /* White text color */
+    padding: 40px 0;
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows the columns to wrap on smaller screens */
+    max-width: 1200px; /* Max width of the footer content */
+    margin: auto;
+  }
+  
+  .footer-section {
+    margin: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2em; /* Larger font size for headings */
+    margin-bottom: 15px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li {
+    line-height: 1.6; /* Spacing between lines */
+    margin-bottom: 10px; /* Spacing between list items */
+  }
+  
+  .footer-section ul li a {
+    color: #ffffff; /* White text color for links */
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.3s ease; /* Transition for link color change on hover */
+  }
+  
+  .footer-section ul li a:hover {
+    color: #dddddd; /* Light grey color on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px; /* Space above the copyright text */
+  }
+  
+  .footer-bottom p {
+    margin: 0; /* Removes default margin from paragraph */
+    color: #cccccc; /* Light grey color for the copyright text */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      margin: 10px 0; /* Reduced margin for mobile */
+    }
+  }
+  
+  /* Additional styles for the COVID updates button if present in the footer */
+  .covid-updates-button {
+    text-align: center; /* Center the button if it's full width */
+    padding: 20px 0; /* Space above and below the button */
+  }
+  
+  .covid-updates-button a {
+    background-color: #000; /* Black background for the button */
+    color: #ffffff; /* White text color for the button */
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Removes underline from links */
+    transition: background-color 0.3s ease; /* Transition for background color change on hover */
+  }
+  
+  .covid-updates-button a:hover {
+    background-color: #555555; /* Dark grey background on hover */
+  }
+  
+  .page-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    color: #fff;
+    background-color: #81181B; /* Assuming the page content has a white background */
+  }
+  
+  .about-us-header {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .about-us-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-header p {
+    font-size: 1.2em;
+    color: #fff;
+  }
+  
+  .our-mission, .our-team, .our-initiatives, .our-impact {
+    margin: 40px 0;
+  }
+  
+  .our-mission h2, .our-team h2, .our-initiatives h2, .our-impact h2 {
+    font-size: 2em;
+    color: #81181B; /* Matching the color to the footer */
+    margin-bottom: 15px;
+  }
+  
+  .our-mission p, .our-impact p {
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  .our-initiatives ul {
+    list-style-type: disc;
+    padding-left: 40px;
+  }
+  
+  .our-initiatives li strong {
+    color: #fff; /* Color to emphasize key terms */
+  }
+  
+  .our-team .team-members {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Space between team member cards */
+  }
+  
+  .team-member {
+    width: calc(33.333% - 20px); /* Adjust based on your design */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Space below each team member card */
+  }
+  
+  .team-member img {
+    width: 100px; /* Adjust based on your design */
+    height: 100px;
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 15px;
+  }
+  
+  .team-member h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .team-member p {
+    font-size: 1em;
+    color: #fff;
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .team-member {
+      width: calc(50% - 20px); /* Adjust for smaller screens */
+    }
+  
+    .our-mission, .our-team, .our-initiatives, .our-impact {
+      margin: 20px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team-member {
+      width: 100%; /* Full width on very small screens */
+    }
+  }
+  
