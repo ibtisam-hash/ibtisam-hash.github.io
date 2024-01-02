@@ -21,7 +21,7 @@ body {
     font-size: 16px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 19px;
     text-decoration: none;
     display: block;
     background-color: #81181B; /* Re-apply the background color to each link */
@@ -173,7 +173,7 @@ body {
   }
 
   .events-section {
-    background-color: #fff; /* Adjust the color to match the body's background */
+    background-color: #81181B; /* Adjust the color to match the body's background */
     padding: 20px;
     text-align: center;
   }
@@ -555,7 +555,6 @@ body {
 
   
   .hero-section {
-    position: relative;
   text-align: center;
   background-image: url('./images/1-2048x1365.jpg');
   background-size: cover;
@@ -812,11 +811,6 @@ input[type="text"] {
 .covid-updates-button a:hover {
   background-color: #555555; /* Dark grey background on hover */
 }
-body {
-    font-family: Arial, sans-serif;
-    color: maroon;
-    background-color: white;
-}
 
 /* start */
 .categories {
@@ -832,7 +826,7 @@ body {
   text-decoration: none;
   color: black;
   margin: 5px;
-  flex-basis: calc(16.666% - 10px);
+  flex-basis: calc(20% - 10px); /* Adjusted for better spacing */
   box-sizing: border-box;
   text-align: center;
 }
@@ -842,9 +836,8 @@ body {
 }
 
 .category .icon img {
-
-  width: 40%
-  height:50px;
+  width: 100%; /* Changed to 100% for better scaling */
+  height: auto;
 }
 
 .category .title {
@@ -858,13 +851,12 @@ body {
   color: gray;
 }
 
-/* Custom colors for categories */
-.category:nth-child(1) { background-color: maroon; }
-.category:nth-child(2) { background-color: maroon; }
-.category:nth-child(3) { background-color: maroon; }
-.category:nth-child(4) { background-color: maroon; }
-.category:nth-child(5) { background-color: maroon; }
-.category:nth-child(6) { background-color: maroon; }
+/* Custom colors for categories (example) */
+.category:nth-child(1) { background-color: #e57373; }
+.category:nth-child(2) { background-color: #64b5f6; }
+.category:nth-child(3) { background-color: #81c784; }
+.category:nth-child(4) { background-color: #ffd54f; }
+.category:nth-child(5) { background-color: #ba68c8; }
 
 .category:hover {
   opacity: 0.8;
@@ -879,6 +871,7 @@ body {
     margin-bottom: 15px;
   }
 }
+
 /* end */
 .features {
   display: flex;
@@ -1054,295 +1047,3 @@ body {
   }
 }
 /*job board end  */
-/* login form */
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-html,body{
-  display: grid;
-  height: 100%;
-  width: 100%;
-  place-items: center;
-  background: maroon;
-}
-::selection{
-  background: maroon;
-  color: #fff;
-}
-.wrapper{
-  width: 380px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
-}
-.wrapper .title{
-  font-size: 35px;
-  font-weight: 600;
-  text-align: center;
-  line-height: 100px;
-  color: #fff;
-  user-select: none;
-  border-radius: 15px 15px 0 0;
-  background-color: maroon;
-  /* background: linear-gradient(-135deg, maroon, white); */
-}
-.wrapper form{
-  padding: 10px 30px 50px 30px;
-}
-.wrapper form .field{
-  height: 50px;
-  width: 100%;
-  margin-top: 20px;
-  position: relative;
-}
-.wrapper form .field input{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  font-size: 17px;
-  padding-left: 20px;
-  border: 1px solid lightgrey;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-.wrapper form .field input:focus,
-form .field input:valid{
-  border-color: maroon;
-}
-.wrapper form .field label{
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  color: #999999;
-  font-weight: 400;
-  font-size: 17px;
-  pointer-events: none;
-  transform: translateY(-50%);
-  transition: all 0.3s ease;
-}
-form .field input:focus ~ label,
-form .field input:valid ~ label{
-  top: 0%;
-  font-size: 16px;
-  color: maroon;
-  background: #fff;
-  transform: translateY(-50%);
-}
-form .content{
-  display: flex;
-  width: 100%;
-  height: 50px;
-  font-size: 16px;
-  align-items: center;
-  justify-content: space-around;
-}
-form .content .checkbox{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-form .content input{
-  width: 15px;
-  height: 15px;
-  background: maroon;
-}
-form .content label{
-  color: #262626;
-  user-select: none;
-  padding-left: 5px;
-}
-form .content .pass-link{
-  color: "";
-}
-form .field input[type="submit"]{
-  color: #fff;
-  border: none;
-  padding-left: 0;
-  margin-top: -10px;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: maroon;
-}
-form .field input[type="submit"]:active{
-  transform: scale(0.95);
-}
-form .signup-link{
-  color: #262626;
-  margin-top: 20px;
-  text-align: center;
-}
-form .pass-link a,
-form .signup-link a{
-  color: maroon;
-  text-decoration: none;
-}
-form .pass-link a:hover,
-form .signup-link a:hover{
-  text-decoration: underline;
-}
-.logo {
-    text-align: center; /* Center the logo */
-    margin: 20px 0; /* Add some space around the logo */
-}
-
-.logo img {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
-}
-
-
-/* signup */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-}
-body{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: white;
-}
-.container{
-  max-width: 700px;
-  width: 100%;
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-}
-.container .title{
-  font-size: 25px;
-  font-weight: 500;
-  position: relative;
-}
-.container .title::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-  border-radius: 5px;
-  background-color: maroon;
-}
-.content form .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
-}
-form .user-details .input-box{
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
-}
-form .input-box span.details{
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.user-details .input-box input{
-  height: 45px;
-  width: 100%;
-  outline: none;
-  font-size: 16px;
-  border-radius: 5px;
-  padding-left: 15px;
-  border: 1px solid #ccc;
-  border-bottom-width: 2px;
-  transition: all 0.3s ease;
-}
-.user-details .input-box input:focus,
-.user-details .input-box input:valid{
-  border-color: maroon;
-}
- form .gender-details .gender-title{
-  font-size: 20px;
-  font-weight: 500;
- }
- form .category{
-   display: flex;
-   width: 80%;
-   margin: 14px 0 ;
-   justify-content: space-between;
- }
- form .category label{
-   display: flex;
-   align-items: center;
-   cursor: pointer;
- }
- form .category label .dot{
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: #d9d9d9;
-  border: 5px solid transparent;
-  transition: all 0.3s ease;
-}
- #dot-1:checked ~ .category label .one,
- #dot-2:checked ~ .category label .two,
- #dot-3:checked ~ .category label .three{
-   background: maroon;
-   border-color: #d9d9d9;
- }
- form input[type="radio"]{
-   display: none;
- }
- form .button{
-   height: 45px;
-   margin: 35px 0
- }
- form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background-color: maroon;
- }
- form .button input:hover{
-  /* transform: scale(0.99); */
-  background-color: maroon;
-}
- @media(max-width: 584px){
- .container{
-  max-width: 100%;
-}
-form .user-details .input-box{
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  form .category{
-    width: 100%;
-  }
-  .content form .user-details{
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar{
-    width: 5px;
-  }
-  }
-  @media(max-width: 459px){
-  .container .content .category{
-    flex-direction: column;
-  }
-}
-/*form end  */
-  
