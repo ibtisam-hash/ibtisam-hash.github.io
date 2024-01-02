@@ -1,7 +1,66 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #81181B; /* Ensure the body background matches the navbar */
+}
+.navbar {
+  overflow: visible;
+  display: block;
+  background-color: #81181B;
+}
+.logo-space {
+  float: left;
+  margin-top: 20px;
+  width: 100px; /* Width of the logo space */
+  height: 50px; /* Height of your logo */
+  background-size: contain;
+}
+.navbar a, .dropbtn {
+  margin-top: 35px;
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 19px;
+  text-decoration: none;
+  display: block;
+  background-color: #81181B; /* Re-apply the background color to each link */
+}
+.dropbtn {
+  background-color: #81181B;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  float: left;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #81181B; /* Match the dropdown content background to the navbar */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 0;
+  top: 100%;
+}
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color: grey;
+  background-color: #81181B; /* Keep the hover background color unchanged */
+}
   .header {
     background-color: maroon;
     color: white;
@@ -36,7 +95,6 @@ body {
 
   
   .hero-section {
-    position: relative;
   text-align: center;
   background-image: url('./images/1-2048x1365.jpg');
   background-size: cover;
@@ -313,7 +371,7 @@ body {
   text-decoration: none;
   color: black;
   margin: 5px;
-  flex-basis: calc(16.666% - 10px);
+  flex-basis: calc(20% - 10px); /* Adjusted for better spacing */
   box-sizing: border-box;
   text-align: center;
 }
@@ -323,9 +381,8 @@ body {
 }
 
 .category .icon img {
-
-  width: 40%
-  height:50px;
+  width: 100%; /* Changed to 100% for better scaling */
+  height: auto;
 }
 
 .category .title {
@@ -339,13 +396,12 @@ body {
   color: gray;
 }
 
-/* Custom colors for categories */
-.category:nth-child(1) { background-color: maroon; }
-.category:nth-child(2) { background-color: maroon; }
-.category:nth-child(3) { background-color: maroon; }
-.category:nth-child(4) { background-color: maroon; }
-.category:nth-child(5) { background-color: maroon; }
-.category:nth-child(6) { background-color: maroon; }
+/* Custom colors for categories (example) */
+.category:nth-child(1) { background-color: #e57373; }
+.category:nth-child(2) { background-color: #64b5f6; }
+.category:nth-child(3) { background-color: #81c784; }
+.category:nth-child(4) { background-color: #ffd54f; }
+.category:nth-child(5) { background-color: #ba68c8; }
 
 .category:hover {
   opacity: 0.8;
