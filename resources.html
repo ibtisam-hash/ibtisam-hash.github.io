@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #790000; 
+    color: #fff;
+    padding-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    
+    display: none;
+    border: none;
+    border-radius: 4px;
+   
+}
+
+/* Style for the arrow icon */
+.scroll-to-top::before {
+    content: "\2191"; /* Unicode arrow-up character */
+    font-size: 20px;
+}
+
+.divider {
+    width: 95%;
+    margin: 20px auto;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #6c0000, transparent);
+}
+
+   /* Container for the buttons */
+   .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Button styles */
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px; /* Increased width for more space */
+    height: 60px; /* Increased height for bigger icons */
+    margin: 20px;
+    border: 2px solid transparent; /* Transparent border initially */
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffffff; /* Text color */
+    font-size: 22px; /* Text size */
+    font-family: 'Poppins', sans-serif; /* Specify your desired font here */
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.2); /* Default button shadow */
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, 
+                color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+/* Button icons */
+.social-button img {
+    width: 48px; /* Increased icon size */
+    height: 48px;
+    margin-right: 16px; /* Increased margin for spacing */
+}
+
+/* Text styles */
+.button-text {
+    flex-grow: 1; /* Allow text to grow and take remaining space */
+}
+
+/* LinkedIn button */
+.linkedin-button {
+    background-color: #a10000; /* Lighter LinkedIn blue */
+}
+
+/* GitHub button */
+.github-button {
+  background-color: #a10000; /* Light gray */
+}
+
+/* Gmail button */
+.gmail-button {
+  background-color: #a10000; /* Lighter Gmail red */
+}
+
+/* WhatsApp button */
+.whatsapp-button {
+  background-color: #a10000; /* Lighter WhatsApp green */
+}
+.resume-button {
+  background-color: #a10000;  /* Lighter WhatsApp green */
+}
+
+
+/* LinkedIn button */
+.linkedin-button:hover {
+background-color: #630000; /* Lighter LinkedIn blue */
+  border-color: #630000; /* Border color on hover */
+  color: #ffffff; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* GitHub button */
+.github-button:hover {
+  background-color: #630000; /* Lighter LinkedIn blue */
+  border-color: #630000; /* Border color on hover */
+  color: #ffffff; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+/* Gmail button */
+.gmail-button:hover {
+  background-color: #630000; /* Lighter LinkedIn blue */
+  border-color: #630000; /* Border color on hover */
+  color: #ffffff; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* WhatsApp button */
+.whatsapp-button:hover {
+  background-color: #630000; /* Lighter LinkedIn blue */
+  border-color: #630000; /* Border color on hover */
+  color: #ffffff; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+.resume-button:hover {
+  background-color: #630000; /* Lighter LinkedIn blue */
+  border-color: #630000; /* Border color on hover */
+  color: #ffffff; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+.fbutton:hover {
+    color: #40b4da; /* Change the color immediately on hover */
+    transform: scale(1.2);
+}
+
+.fbutton {
+    color: #2093b9;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+    </style>
+</head>
+<body>
+    <header style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <img src="images/logo2.png"  class="w-28 h-28 " >
+          
+          
+            <span style="color: white;font-size: 28px;font-weight: 700;" class="ml-3 text-xl">DHA Suffa University</span>
+          </a>
+          <nav style="font-size: 16px;" class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="about.html" class="mr-5 hover:text-gray-900">About Us</a>
+            <a href="services.html" class="mr-5 hover:text-gray-900">Services</a>
+            <a href="resources.html" class="mr-5 hover:text-gray-900">Resources</a>
+            <a href="job.html" class="mr-5 hover:text-gray-900">Job Portal</a>
+            <a href="opp.html" class="mr-5 hover:text-gray-900">Opportunities</a>
+            <a href="feedback.html" class="mr-5 hover:text-gray-900">Feedback</a>
+            <a href="contact.html" class="mr-5 hover:text-gray-900">Contact Us</a>
+          </nav>
+          <button style="z-index: 10;" class="scroll-to-top" onclick="scrollToTop()"></button>
+        </div>
+      </header>
+    </header>
+
+
+  
+                <section style="margin-top: 100px;"   class="text-gray-600 body-font relative">
+                  <div style="display: flex;justify-content: space-around;">
+<div style="display: block;">
+                    <div style="margin-top: 80px;margin-bottom: 40px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
+                      <h2  class="text-center text-6xl font-bold text-gray-900 ">Our DSU</h2>  <h2 style="color: #a30000;margin-left: 12px;"  class="text-center text-6xl font-bold text-gray-900 ">Resources</h2>
+                    </div>
+                  <div style="width: 530px;">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus illo numquam laudantium iusto asperiores perferendis sit delectus vel eum labore veniam error, aliquid perspiciatis, dignissimos nam laborum quo exercitationem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus illo numquam laudantium iusto asperiores perferendis sit delectus vel eum labore veniam error, aliquid perspiciatis, dignissimos nam laborum quo exercitationem minima!</p>
+                  </div>
+                  </div>
+                  <div class="button-container">
+                    <!-- LinkedIn Button -->
+                    <a href="https://www.linkedin.com/in/fahad-farrukh-ff26/" target="_blank" class="social-button linkedin-button">
+                  
+                      <span class="button-text">Internship Application Form</span>
+                  </a>
+          
+                
+                  <a href="https://github.com/FahadFarrukh" target="_blank" class="social-button github-button">
+                     
+                      <span class="button-text">Supervisor Evaluation Form</span>
+                  </a>
+          
+               
+                  <a href="mailto:fahadfarrukh26@gmail.com" target="_blank" class="social-button gmail-button">
+                     
+                      <span class="button-text">Student Evaluation Form</span>
+                  </a>
+          
+                 
+                  <a href="https://wa.me/+923023088474" target="_blank" class="social-button whatsapp-button">
+                    
+                      <span class="button-text">Employer Survey Form</span>
+                  </a>
+                  
+                 
+                  <a href="Fahads_Resume.pdf" download class="social-button resume-button">
+                    
+                      <span class="button-text">Report Format</span>
+                  </a>
+                </div> </div>
+                </section>
+
+      <div style="margin-bottom: 50px;margin-top: 80px;" id="abc">   <div class="divider"></div></div>
+   
+      <footer style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
+        <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+          <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <span class="ml-3 text-xl">DHA Suffa University</span>
+            </a>
+            <p class="mt-2 text-sm ">Air plant banjo lyft occupy retro adaptogen indego</p>
+          </div>
+          <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class=" hover:text-gray-800">First Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Second Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Third Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Fourth Link</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class=" hover:text-gray-800">First Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Second Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Third Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Fourth Link</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class=" hover:text-gray-800">First Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Second Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Third Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Fourth Link</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class=" hover:text-gray-800">First Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Second Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Third Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Fourth Link</a>
+                </li>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: rgb(53, 0, 0);color: white;">
+          <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+            <p class=" text-sm text-center sm:text-left">© 2020 Tailblocks —
+              <a  rel="noopener noreferrer" class=" ml-1" target="_blank">@Fahad-Ibtisam-Ibad</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+              <a class="">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 ">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 ">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 ">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        // Function to scroll to the top of the page
+function scrollToTop() {
+    const duration = 500;
+    const startingYOffset = window.pageYOffset;
+    const startTime = performance.now();
+
+    function scrollStep(timestamp) {
+        const elapsedTime = timestamp - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        window.scrollTo(0, startingYOffset * (1 - progress));
+
+        if (progress < 1) {
+            requestAnimationFrame(scrollStep);
+        }
+    }
+
+    requestAnimationFrame(scrollStep);
+}
+
+// Show/hide the "Go to Top" button based on scroll position
+window.addEventListener("scroll", function() {
+    const scrollButton = document.querySelector(".scroll-to-top");
+    if (window.pageYOffset > 300) {
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+});
+      </script>
+</body>
+</html>
