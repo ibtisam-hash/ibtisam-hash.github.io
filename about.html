@@ -1,184 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>About Us - CSR-DHA Suffa University</title>
-<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="about_styles.css">
-<script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #790000; 
+    color: #fff;
+    padding-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    
+    display: none;
+    border: none;
+    border-radius: 4px;
+   
+}
+
+/* Style for the arrow icon */
+.scroll-to-top::before {
+    content: "\2191"; /* Unicode arrow-up character */
+    font-size: 20px;
+}
+#abc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divider {
+    width: 95%;
+    margin: 20px auto;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #6c0000, transparent);
+}
+    </style>
 </head>
 <body>
-<header>
-    <div class="navbar">
-        <div class="logo-space">
-          <img src="images/dsu_logo-1.webp" alt="logo">
+    <header style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <img src="images/logo2.png"  class="w-28 h-28 " >
+          
+          
+            <span style="color: white;font-size: 28px;font-weight: 700;" class="ml-3 text-xl">DHA Suffa University</span>
+          </a>
+          <nav style="font-size: 16px;" class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="about.html" class="mr-5 hover:text-gray-900">About Us</a>
+            <a href="services.html" class="mr-5 hover:text-gray-900">Services</a>
+            <a href="" class="mr-5 hover:text-gray-900">Resources</a>
+            <a href="job.html" class="mr-5 hover:text-gray-900">Job Portal</a>
+            <a href="opp.html" class="mr-5 hover:text-gray-900">Opportunities</a>
+            <a href="feedback.html" class="mr-5 hover:text-gray-900">Feedback</a>
+            <a href="contact.html" class="mr-5 hover:text-gray-900">Contact Us</a>
+          </nav>
+          <button style="z-index: 10;" class="scroll-to-top" onclick="scrollToTop()"></button>
         </div>
-        <a href="index.html" style="margin-left: 230px;">Home</a>
-        <a href="about.html">About us</a>
-        <a href="services.html">Services</a>
-        <div class="dropdown">
-          <button class="dropbtn">Resources 
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Internship Application Form</a>
-            <a href="#">Supervisor Evaluation Form</a>
-            <a href="#">Student Evaluation Form</a>
-            <a href="#">Employer Survey Form</a>
-            <a href="#">Report Format</a>
-          </div>
-        </div> 
-        <a href="job.html">Job Portal</a>
-        <a href="opp.html">Opportunities</a>
-        <a href="feedback.html">Feedback</a>
-        <a href="contact.html">Contact Us</a>
-      </div>
+      </header>
     </header>
-<!-- Page Content -->
-<section class="text-gray-600 body-font">
-  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-      <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-    </div>
-    <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">About CSCR Office - DHA Suffa University</h1>
-      <p class="mb-8 leading-relaxed">Welcome to the official page of the CSR office at DHA Suffa University. Here you can learn about our mission, the initiatives we undertake, and the impact we have on the community.</p>
-      <div class="flex w-full md:justify-start justify-center items-end">
-      </div>
-    </div>
-  </div>
-</section>
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center bg">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
-        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-      </svg>
-      <p class="leading-relaxed text-lg">The CSR Office at DHA Suffa University is dedicated to creating a positive impact on society through educational excellence, community service, and sustainable practices.</p>
-      <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-      <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Our Mission</h2>
-      <p class="text-gray-500">Mrs. Subeika Rizvi</p>
-    </div>
-  </div>
-</section>
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">OUR TEAM</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
-    </div>
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 lg:w-1/2">
-        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="images/csr.jpg">
-          <div class="flex-grow sm:pl-8">
-            <h2 class="title-font font-medium text-lg text-gray-900">Mrs. Subeika Rizvi</h2>
-            <h3 class="text-gray-500 mb-3">Senior Lecturer/CSR Office</h3>
-            <p class="mb-4">• MS in Management Sciences from SZABIST, Pakistan in 2016 <br>
 
-              • MBA(Finance) from IBA, Pakistan in 2005 </p>
-            <span class="inline-flex">
-              <a class="text-gray-500">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-5 py-14 md:flex-row flex-col items-center">
+        <div style="margin-top: 100px;" class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 style="font-weight: 600;" class=" title-font sm:text-5xl text-4xl mb-4 font-bold text-gray-900">About DHA Suffa University
+    
+          </h1>
+          <p style="margin-top: 10px;" class="mb-8 leading-relaxed">
+            Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.     Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.
+            Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.
+        
+          </p>
+          <div class="flex justify-center">
+      </div>
+        </div>
+        <div id="image_1" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <img class="object-cover object-center rounded" alt="hero" src="images/logo2.png">
+        </div>
+      </div>
+    </section>
+
+
+      <div style="margin-bottom: 50px;" id="abc">   <div class="divider"></div></div>
+   
+      <footer style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
+        <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+          <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <span class="ml-3 text-xl">DHA Suffa University</span>
+            </a>
+            <p class="mt-2 text-sm ">Air plant banjo lyft occupy retro adaptogen indego</p>
+          </div>
+          <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class=" hover:text-gray-800">First Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Second Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Third Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Fourth Link</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class=" hover:text-gray-800">First Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Second Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Third Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Fourth Link</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class=" hover:text-gray-800">First Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Second Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Third Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Fourth Link</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class=" hover:text-gray-800">First Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Second Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Third Link</a>
+                </li>
+                <li>
+                  <a class=" hover:text-gray-800">Fourth Link</a>
+                </li>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: rgb(53, 0, 0);color: white;">
+          <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+            <p class=" text-sm text-center sm:text-left">© 2020 Tailblocks —
+              <a  rel="noopener noreferrer" class=" ml-1" target="_blank">@Fahad-Ibtisam-Ibad</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+              <a class="">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                 </svg>
               </a>
-              <a class="ml-2 text-gray-500">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <a class="ml-3 ">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                   <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                 </svg>
               </a>
-              <a class="ml-2 text-gray-500">
+              <a class="ml-3 ">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 ">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
                 </svg>
               </a>
             </span>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </footer>
 
-<footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>ABOUT US</h3>
-        <ul>
-          <li><a href="#">About DSU</a></li>
-          <li><a href="#">Vision and Mission</a></li>
-          <li><a href="#">Objectives</a></li>
-          <li><a href="#">Core Values</a></li>
-          <li><a href="#">Equal Opportunity Policy</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>ACADEMICS</h3>
-        <ul>
-          <li><a href="#">Mechanical Engineering</a></li>
-          <li><a href="#">Electrical Engineering</a></li>
-          <li><a href="#">Civil Engineering</a></li>
-          <li><a href="#">Computer Science</a></li>
-          <li><a href="#">Software Engineering</a></li>
-          <li><a href="#">Data Science</a></li>
-          <li><a href="#">Management Sciences</a></li>
-          <li><a href="#">Business Analytics & Programming</a></li>
-          <li><a href="#">Accounting & Finance</a></li>
-          <li><a href="#">English</a></li>
-          <li><a href="#">International Relations</a></li>
-          <li><a href="#">Psychology</a></li>
-          <li><a href="#">Academic Calendar</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>FACILITIES & SERVICES</h3>
-        <ul>
-          <li><a href="#">Library</a></li>
-          <li><a href="#">Mechanical Labs</a></li>
-          <li><a href="#">Electrical Labs</a></li>
-          <li><a href="#">Computer Science Labs</a></li>
-          <li><a href="#">IT Infrastructure</a></li>
-          <li><a href="#">Facilities at DSU</a></li>
-          <li><a href="#">Career Services & Corporate Relations</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>LIFE AT DSU</h3>
-        <ul>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Professional Societies</a></li>
-          <li><a href="#">Student Societies</a></li>
-          <li><a href="#">Student Handbook</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>CONNECT DSU</h3>
-        <ul>
-          <li><a href="#">Apply</a></li>
-          <li><a href="#">DCK Hostel & Facilities</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Downloads</a></li>
-          <li><a href="#">DACCE</a></li>
-          <li><a href="#">Tenders</a></li>
-          <li><a href="#">Alumni</a></li>
-          <li><a href="#">Video Gallery</a></li>
-          <li><a href="#">FAQ's</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Policies</a></li>
-          <li><a href="#">Newsletter</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-        <br>
-      <p>&copy; Copyright - DHA Suffa University <br>Made by Ibtisam Hashmi - Fahad Farrukh - Ibad Absar</p>
-    </div>
-  </footer>
-<script src="script.js"></script>
+      <script>
+        // Function to scroll to the top of the page
+function scrollToTop() {
+    const duration = 500;
+    const startingYOffset = window.pageYOffset;
+    const startTime = performance.now();
+
+    function scrollStep(timestamp) {
+        const elapsedTime = timestamp - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        window.scrollTo(0, startingYOffset * (1 - progress));
+
+        if (progress < 1) {
+            requestAnimationFrame(scrollStep);
+        }
+    }
+
+    requestAnimationFrame(scrollStep);
+}
+
+// Show/hide the "Go to Top" button based on scroll position
+window.addEventListener("scroll", function() {
+    const scrollButton = document.querySelector(".scroll-to-top");
+    if (window.pageYOffset > 300) {
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+});
+      </script>
 </body>
 </html>
