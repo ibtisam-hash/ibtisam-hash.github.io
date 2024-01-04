@@ -44,6 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  
 }
 
 /* Button styles */
@@ -51,14 +52,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px; /* Increased width for more space */
-    height: 60px; /* Increased height for bigger icons */
+    width: 450px; /* Increased width for more space */
+    height: 55px; /* Increased height for bigger icons */
     margin: 20px;
     border: 2px solid transparent; /* Transparent border initially */
     border-radius: 10px;
     padding: 10px;
     color: #ffffff; /* Text color */
-    font-size: 22px; /* Text size */
+    font-size: 18px; /* Text size */
     font-family: 'Poppins', sans-serif; /* Specify your desired font here */
     text-decoration: none;
     text-align: center;
@@ -152,44 +153,276 @@ background-color: #630000; /* Lighter LinkedIn blue */
 }
 
 
+
+
+
+
+
+
+
+    /* UTILITIES */
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(120, 0, 0);
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/* LOGO */
+.logo {
+  font-size: 26px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: #560000;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+  position: relative; 
+}
+
+.dropdown {
+  background-color: rgb(1, 139, 139);
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+  display: none;
+} 
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+ .menu {
+    display:none;
+    position: absolute;
+    background-color: rgb(120, 0, 0);
+    right: 0;
+    left: 0;
+    margin-top: 20px;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color:#560000;
+    transition: 0.3s ease;  
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+}
+
+
+
+
+
+
+
+
+
+.main{
+display: flex;
+justify-content: space-evenly;
+}
+.para{
+  margin-left: 5%;
+  margin-right: 5%;
+margin-top: 14px;
+}
+
+@media (max-width: 1168px) {
+.main{
+display: block;
+justify-content: space-evenly;
+}
+.social-button{
+  width: 80%;
+
+}
+.para{
+  margin-left: 4%;
+  margin-right: 2%;
+  margin-bottom: 8px;
+  margin-top: 14px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  
+}
+#contact{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+.logo{
+  font-size: 22px;
+}
+
+h2{
+  font-size: 34px;
+}
+}
+@media (min-width: 1168px) {
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5%;
+  
+}
+#contact{
+  margin-top: 30px;
+  display: flex;
+  margin-left: 10%;
+}
+h2{
+  font-size: 42px;
+}
+}
+
+
     </style>
 </head>
 <body>
-    <header style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <img src="images/logo2.png"  class="w-28 h-28 " >
-          
-          
-            <span style="color: white;font-size: 28px;font-weight: 700;" class="ml-3 text-xl">DHA Suffa University</span>
-          </a>
-          <nav style="font-size: 16px;" class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
-            <a href="about.html" class="mr-5 hover:text-gray-900">About Us</a>
-            <a href="services.html" class="mr-5 hover:text-gray-900">Services</a>
-            <a href="resources.html" class="mr-5 hover:text-gray-900">Resources</a>
-            <a href="job.html" class="mr-5 hover:text-gray-900">Job Portal</a>
-            <a href="opp.html" class="mr-5 hover:text-gray-900">Opportunities</a>
-            <a href="feedback.html" class="mr-5 hover:text-gray-900">Feedback</a>
-            <a href="contact.html" class="mr-5 hover:text-gray-900">Contact Us</a>
-          </nav>
-          <button style="z-index: 10;" class="scroll-to-top" onclick="scrollToTop()"></button>
-        </div>
-      </header>
-    </header>
+  <nav style="z-index: 999;" class="navbar">
+    <!-- LOGO -->
+    <div style="display: flex;align-items: center;z-index: 999;" class="logo"><div  ><img style="height: 90px;width: 90px;" src="images/logo2.png" alt=""></div><h1 style="font-weight: 700;font-size: 26;">DHA Suffa University</h1> </div>
 
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+
+      <!-- USING CHECKBOX HACK -->
+      <input style="z-index: 999;" type="checkbox" id="checkbox_toggle" />
+      <label style="z-index: 999;" for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+      <!-- NAVIGATION MENUS -->
+      <div style="z-index: 999;" class="menu">
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="job.html">Job Portal</a></li>
+        <li><a href="opp.html">Opportunities</a></li>
+        <li><a href="/">Contact Us</a></li>
+       
+       
+      </div>
+    </ul>
+  </nav>
 
   
                 <section style="margin-top: 100px;"   class="text-gray-600 body-font relative">
-                  <div style="display: flex;justify-content: space-around;">
-<div style="display: block;">
-                    <div style="margin-top: 80px;margin-bottom: 40px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
-                      <h2  class="text-center text-6xl font-bold text-gray-900 ">Our DSU</h2>  <h2 style="color: #a30000;margin-left: 12px;"  class="text-center text-6xl font-bold text-gray-900 ">Resources</h2>
-                    </div>
-                  <div style="width: 530px;">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus illo numquam laudantium iusto asperiores perferendis sit delectus vel eum labore veniam error, aliquid perspiciatis, dignissimos nam laborum quo exercitationem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus illo numquam laudantium iusto asperiores perferendis sit delectus vel eum labore veniam error, aliquid perspiciatis, dignissimos nam laborum quo exercitationem minima!</p>
+                  <div class="main" style="justify-content: space-evenly;">
+                    <div style="display: block;">
+                      <div style="margin-top: 30px;display: flex;" id="contact" class="circle-text heading1">
+                        <h2  class="text-center  font-bold text-gray-900 ">Our DSU</h2>  <h2 style="color: #ac0000;margin-left: 8px;"  class=" text-center  font-bold text-gray-900 ">Resources</h2>
+                      
+                      </div>
+                <div class="para" style="display: flex;justify-content: center;">         <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus illo numquam laudantium iusto asperiores perferendis sit delectus vel eum labore veniam error, aliquid perspiciatis, dignissimos nam laborum quo exercitationem minima!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus illo numquam laudantium iusto asperiores perferendis sit delectus vel eum labore veniam error, aliquid perspiciatis, dignissimos nam laborum quo exercitationem minima!</p>
+                </div>
                   </div>
-                  </div>
+                  
                   <div class="button-container">
                     <!-- LinkedIn Button -->
                     <a href="https://www.linkedin.com/in/fahad-farrukh-ff26/" target="_blank" class="social-button linkedin-button">
@@ -340,35 +573,27 @@ background-color: #630000; /* Lighter LinkedIn blue */
         </div>
       </footer>
 
-      <script>
-        // Function to scroll to the top of the page
-function scrollToTop() {
-    const duration = 500;
-    const startingYOffset = window.pageYOffset;
-    const startTime = performance.now();
-
-    function scrollStep(timestamp) {
-        const elapsedTime = timestamp - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
-        window.scrollTo(0, startingYOffset * (1 - progress));
-
-        if (progress < 1) {
-            requestAnimationFrame(scrollStep);
-        }
-    }
-
-    requestAnimationFrame(scrollStep);
-}
-
-// Show/hide the "Go to Top" button based on scroll position
-window.addEventListener("scroll", function() {
-    const scrollButton = document.querySelector(".scroll-to-top");
-    if (window.pageYOffset > 300) {
-        scrollButton.style.display = "block";
-    } else {
-        scrollButton.style.display = "none";
-    }
-});
-      </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
