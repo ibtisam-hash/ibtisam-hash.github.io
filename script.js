@@ -1,58 +1,87 @@
-let slideIndex = 0;
-let slides = document.getElementsByClassName("slide");
-let slideContainer = document.querySelector(".slides");
-let numOfSlides = slides.length;
-let slideWidth = slides[0].getBoundingClientRect().width;
-let interval = 5000; // 5 seconds
-let moving = false; // Flag to prevent double-clicking
+(function ($) {
+    "use strict";
 
-function moveSlides() {
-  if (!moving) {
-    moving = true;
-    slideContainer.style.transform = 'translateX(' + (-slideWidth * slideIndex) + 'px)';
-    slideIndex++;
-  
-    if (slideIndex >= numOfSlides) {
-      slideIndex = 0;
-    }
-
-    setTimeout(() => {
-      moving = false;
-    }, 500); // Wait for half the transition duration
-  }
-}
-
-setInterval(moveSlides, interval);
-
-document.querySelector('.prev').addEventListener('click', () => {
-  if (slideIndex > 0 && !moving) {
-    slideIndex--;
-    moveSlides();
-  }
-});
-
-document.querySelector('.next').addEventListener('click', () => {
-  if (slideIndex < numOfSlides - 1 && !moving) {
-    moveSlides();
-  }
-});
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+    spinner();
+    
+    
+    // Initiate the wowjs
+    new WOW().init();
 
 
-let logoIndex = 0;
-let logoContainer = document.querySelector('.logo-slide');
-let logos = logoContainer.getElementsByTagName('img');
-let totalLogos = logos.length;
-let visibleLogos = 4; // Number of logos you want to display at a time
+    // Sticky Navbar
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.sticky-top').addClass('shadow-sm').css('top', '0px');
+        } else {
+            $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
+        }
+    });
+    
+    
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
 
-function moveLogos(step) {
-  logoIndex += step * visibleLogos;
-  if (logoIndex < 0) {
-    logoIndex = 0;
-  } else if (logoIndex >= totalLogos) {
-    logoIndex = totalLogos - visibleLogos;
-  }
-  logoContainer.style.transform = `translateX(-${logoIndex * (100 / visibleLogos)}%)`;
-}
 
-// Optional: Auto-move logos every few seconds
-setInterval(() => moveLogos(1), 3000);
+    // Modal Video
+    var $videoSrc;
+    $('.btn-play').click(function () {
+        $videoSrc = $(this).data("src");
+    });
+    console.log($videoSrc);
+    $('#videoModal').on('shown.bs.modal', function (e) {
+        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+    })
+    $('#videoModal').on('hide.bs.modal', function (e) {
+        $("#video").attr('src', $videoSrc);
+    })
+
+
+    // Project and Testimonial carousel
+    $(".project-carousel, .testimonial-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 25,
+        loop: true,
+        center: true,
+        dots: false,
+        nav: true,
+        navText : [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ],
+        responsive: {
+			0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            }
+        }
+    });
+    
+})(jQuery);
+
