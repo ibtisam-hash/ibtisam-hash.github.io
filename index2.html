@@ -214,150 +214,54 @@ input[type=checkbox] {
     </ul>
   </nav>
 
-
-<div class="slider">
-    <div class="slides">
-      <!-- You can repeat this section for each slide you want to include -->
-      <div class="slide" id="slide1">
-        <img src="images/slider1.webp" alt="Slide 1">
-      </div>
-      <div class="slide" id="slide1">
-        <img src="images/slider2.webp" alt="Slide 1">
-      </div>
-      <div class="slide" id="slide1">
-        <img src="images/slider3.webp" alt="Slide 1">
-      </div>
-      <!-- Add more slides as needed -->
-    </div>
-    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-    <a class="next" onclick="moveSlide(1)">&#10095;</a>
-  </div>
-  <section class="news-section">
-    <br><br>
-    <h2>CSR Office DSU News</h2>
-    <br><br>
-    <div class="news-grid">
-      <!-- News Item -->
-      <div class="news-item">
-        <img src="images/news.jpg" alt="News Title">
-        <h3>Exciting News from the CSR Office at DHA Suffa University!</h3>
-        <p>Description of the news item...</p>
-      </div>
-      <div class="news-item">
-        <img src="images/news.jpg" alt="News Title">
-        <h3>Exciting News from the CSR Office at DHA Suffa University!</h3>
-        <p>Description of the news item...</p>
-      </div>
-      <div class="news-item">
-        <img src="images/news.jpg" alt="News Title">
-        <h3>Exciting News from the CSR Office at DHA Suffa University!</h3>
-        <p>Description of the news item...</p>
-      </div>
-      <div class="news-item">
-        <img src="images/news.jpg" alt="News Title">
-        <h3>Exciting News from the CSR Office at DHA Suffa University!</h3>
-        <p>Description of the news item...</p>
-      </div>
-      <!-- Repeat for each news item -->
-      <!-- ... other news items ... -->
-    </div>
-    <br><br>
-    <a href="link-to-more-news" class="more-news-btn">More News</a>
-  </section>
-
-  <section class="events-section">
-    <br>
-    <h2>CSR-DSU Events</h2>
-    <br>
-    <div class="events-grid">
-      <!-- Event Item -->
-      <div class="event-item">
-        <img src="images/news.jpg" alt="Event Title">
-        <h3>Event Name Here</h3>
-        <p>Description of the event...</p>
-      </div>
-      <div class="event-item">
-        <img src="images/news.jpg" alt="Event Title">
-        <h3>Event Name Here</h3>
-        <p>Description of the event...</p>
-      </div>
-      <div class="event-item">
-        <img src="images/news.jpg" alt="Event Title">
-        <h3>Event Name Here</h3>
-        <p>Description of the event...</p>
-      </div>
-      <div class="event-item">
-        <img src="images/news.jpg" alt="Event Title">
-        <h3>Event Name Here</h3>
-        <p>Description of the event...</p>
-      </div>
-      <!-- Repeat for each event item -->
-      <!-- ... other event items ... -->
-    </div>
-    <br>
-    <a href="link-to-more-events" class="more-events-btn">More Events</a>
-  </section>
-  
-  <section class="corporate-partners">
-    <br><br>
-    <h2>Corporate Partners</h2>
-    <br><br>
-    <div class="logo-slider">
-      <div class="logo-slide">
-        <img src="images/partner1.webp" alt="Partner Logo 1">
-        <img src="images/partner1.webp" alt="Partner Logo 2">
-        <img src="images/partner1.webp" alt="Partner Logo 3">
-        <img src="images/partner1.webp" alt="Partner Logo 4">
         
-        <!-- Repeat the pattern for more logos if you have them -->
-      </div>
-      <a class="prev-logo" onclick="moveLogos(-1)">&#10094;</a>
-      <a class="next-logo" onclick="moveLogos(1)">&#10095;</a>
+
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+         <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="images/slider1.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="slider">
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="images/slider2.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="slider">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="images/slider3.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="slider">
+        </div>
+        
     </div>
-    <br><br><br><br><br><br>
-  </section>
- 
-  <section class="what-we-do">
-    <br><br>
-    <h2>What We Do</h2>
-    <br>
-    <div class="programs-grid">
-      <!-- Program Item -->
-      <div class="program-item">
-        <img src="images/news.jpg" alt="Program Title 1">
-        <h3>Program Title 1</h3>
-        <p>Brief description of Program 1...</p>
-        <a href="link-to-program-1">Read More...</a>
-      </div>
-      <!-- Repeat for each program -->
-      <div class="program-item">
-        <img src="images/news.jpg" alt="Program Title 1">
-        <h3>Program Title 1</h3>
-        <p>Brief description of Program 1...</p>
-        <a href="link-to-program-1">Read More...</a>
-      </div>
-      <div class="program-item">
-        <img src="images/news.jpg" alt="Program Title 1">
-        <h3>Program Title 1</h3>
-        <p>Brief description of Program 1...</p>
-        <a href="link-to-program-1">Read More...</a>
-      </div>
-      <div class="program-item">
-        <img src="images/news.jpg" alt="Program Title 1">
-        <h3>Program Title 1</h3>
-        <p>Brief description of Program 1...</p>
-        <a href="link-to-program-1">Read More...</a>
-      </div>
-      <div class="program-item">
-        <img src="images/news.jpg" alt="Program Title 1">
-        <h3>Program Title 1</h3>
-        <p>Brief description of Program 1...</p>
-        <a href="link-to-program-1">Read More...</a>
-      </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
     </div>
-  </section>
-  
-  <footer style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+   
+  <footer style="background-color: rgb(120, 0, 0);color: white;" class=" body-font">
     <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
       <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
         <a class="flex title-font font-medium items-center md:justify-start justify-center ">
@@ -471,7 +375,7 @@ input[type=checkbox] {
       </div>
     </div>
   </footer>
-  
-<script src="script.js"></script>
+
+
 </body>
 </html>
