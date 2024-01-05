@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+   <!-- Customized Bootstrap Stylesheet -->
+   <link href="bootstrap.min.css" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
 
@@ -43,9 +46,6 @@
     background: linear-gradient(to right, transparent, #6c0000, transparent);
 }
 
-
-
-
 /* NAVBAR STYLING STARTS */
 .navbar {
   display: flex;
@@ -63,6 +63,7 @@
 /* LOGO */
 .logo {
   font-size: 26px;
+  color: #ffffff;
 }
 
 /* NAVBAR MENU */
@@ -170,14 +171,25 @@ input[type=checkbox] {
     background-color: #4c9e9e;
   }
 }
+.btn-secondary {
+    background-color: #800000; /* Maroon background */
+    border-color: #a10000; /* Maroon border */
+    color: #FFFFFF; /* White text */
+}
+@media (max-width: 1168px) {
 
-        
+.logo{
+  font-size: 20px;
+}
+
+
+}
     </style>
 </head>
 <body>
-   <nav style="z-index: 999;" class="navbar">
+  <nav style="z-index: 999;" class="navbar">
     <!-- LOGO -->
-    <div style="display: flex;align-items: center;z-index: 999;" class="logo"><div  ><img style="height: 90px;width: 90px;" src="images/logo2.png" alt=""></div><h1 style="font-weight: 700;font-size: 26;">DHA Suffa University</h1> </div>
+    <div style="display: flex;align-items: center;z-index: 999;" class="logo"><div  ><img style="height: 90px;width: 90px;" src="images/logo2.png" alt=""></div><h1 style="font-weight: 700;font-size: 26;color: #ffffff;">DHA Suffa University</h1> </div>
 
     <!-- NAVIGATION MENU -->
     <ul class="nav-links">
@@ -203,23 +215,27 @@ input[type=checkbox] {
   </nav>
 
     <section class="text-gray-600 body-font">
-      <div class="container mx-auto flex px-5 py-14 md:flex-row flex-col items-center">
-        <div style="margin-top: 100px;" class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 style="font-weight: 600;" class=" title-font sm:text-5xl text-4xl mb-4 font-bold text-gray-900">About DHA Suffa University
-    
-          </h1>
-          <p style="margin-top: 10px;" class="mb-8 leading-relaxed">
-            Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.     Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.
-            Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.
-        
-          </p>
-          <div class="flex justify-center">
-      </div>
+      <div class="container-fluid py-5 my-5">
+        <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                    <div class="h-100 position-relative">
+                        <img src="https://api.ideagist.com/wp-content/uploads/2019/10/IMG_8860-1.jpg" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                        <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                            <img src="https://api.ideagist.com/wp-content/uploads/2019/10/IMG_8860-1.jpg" class="img-fluid w-100 rounded" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                    <h2 style="font-size: 35px;color: #790000;font-weight: 600;margin-bottom: 5px;" >About Us</h2>
+                    <h1 style="font-size: 40px;font-weight: 600;" class="mb-4">About CSCR DSU</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur quis purus ut interdum. Pellentesque aliquam dolor eget urna ultricies tincidunt. Nam volutpat libero sit amet leo cursus, ac viverra eros tristique. Morbi quis quam mi. Cras vel gravida eros. Proin scelerisque quam nec elementum viverra. Suspendisse viverra hendrerit diam in tempus. Etiam gravida justo nec erat vestibulum, et malesuada augue laoreet.</p>
+                    <p class="mb-4">Pellentesque aliquam dolor eget urna ultricies tincidunt. Nam volutpat libero sit amet leo cursus, ac viverra eros tristique. Morbi quis quam mi. Cras vel gravida eros. Proin scelerisque quam nec elementum viverra. Suspendisse viverra hendrerit diam in tempus.</p>
+                    <a id="btn1" style="background-color: #790000;" href="" class="btn btn-secondary rounded-pill px-5 py-3 text-white ">More Details</a>
+                </div>
+            </div>
         </div>
-        <div id="image_1" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img class="object-cover object-center rounded" alt="hero" src="images/logo2.png">
-        </div>
-      </div>
+    </div>
     </section>
 
 
@@ -340,35 +356,6 @@ input[type=checkbox] {
         </div>
       </footer>
 
-      <script>
-        // Function to scroll to the top of the page
-function scrollToTop() {
-    const duration = 500;
-    const startingYOffset = window.pageYOffset;
-    const startTime = performance.now();
-
-    function scrollStep(timestamp) {
-        const elapsedTime = timestamp - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
-        window.scrollTo(0, startingYOffset * (1 - progress));
-
-        if (progress < 1) {
-            requestAnimationFrame(scrollStep);
-        }
-    }
-
-    requestAnimationFrame(scrollStep);
-}
-
-// Show/hide the "Go to Top" button based on scroll position
-window.addEventListener("scroll", function() {
-    const scrollButton = document.querySelector(".scroll-to-top");
-    if (window.pageYOffset > 300) {
-        scrollButton.style.display = "block";
-    } else {
-        scrollButton.style.display = "none";
-    }
-});
-      </script>
+    
 </body>
 </html>
