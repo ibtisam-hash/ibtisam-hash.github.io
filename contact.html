@@ -1,216 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>About Us - CSR-DHA Suffa University</title>
-<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   
+    <title>Document</title>
+
+
+    <style>
+
+        
+.services .services-item {
+    box-shadow: 0 0 60px rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px 0;
+    position: relative;
+    background-color: #800000; /* Maroon background */
+    color: #FFFFFF; /* White text */
+}
+
+.services-content::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    background: #800000; /* Maroon background */
+    transition: .5s;
+}
+
+.services-content::after {
+    top: 0;
+    bottom: auto;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.services-item:hover .services-content::after {
+    height: 100%;
+    opacity: 1;
+    transition: .5s;
+}
+
+.services-item:hover .services-content-icon {
+    position: relative;
+    z-index: 2;
+}
+
+.services-item .services-content-icon i,
+.services-item .services-content-icon p {
+    transition: .5s;
+}
+
+.services-item:hover .services-content-icon i {
+    color: #800000; /* Maroon icons */
+}
+
+.services-item:hover .services-content-icon p {
+    color: #FFFFFF; /* White text */
+}
+
+/* Additional styles for buttons and other elements, if needed */
+.btn-primary, .carousel-content-btn1, .carousel-content-btn2 {
+    background-color: #800000; /* Maroon buttons */
+    border-color: #800000;
+    color: #FFFFFF; /* White text */
+}
+
+.btn-primary:hover, .carousel-content-btn1:hover, .carousel-content-btn2:hover {
+    background-color: #600000; /* Darker shade of maroon for hover */
+    border-color: #600000;
+}
+
+/* Specific to the 'Fact Start' section */
+.container-fluid.bg-secondary.py-5 {
+    background-color: #800000;
+}
+
+/* gpt additional style */
+.services .services-item {
+    box-shadow: 0 0 60px rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px 0;
+    position: relative;
+}
+
+
+.services-content::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    background: maroon;
+    transition: .5s;
+}
+
+.services-content::after {
+    top: 0;
+    bottom: auto;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.services-item:hover .services-content::after {
+    height: 100%;
+    opacity: 1;
+    transition: .5s;
+}
+
+.services-item:hover .services-content-icon {
+    position: relative;
+    z-index: 2;
+}
+
+.services-item .services-content-icon i,
+.services-item .services-content-icon p {
+    transition: .5s;
+}
+
+.services-item:hover .services-content-icon i {
+    color: var(--bs-secondary) !important;
+}
+
+.services-item:hover .services-content-icon p {
+    color: var(--bs-white);
+}
+/* ... (your existing styles) ... */
+
+.services-content-icon a.btn {
+    background-color: maroon;
+    color: #fff;
+}
+
+.services-inner h1,
+.services-inner h5 {
+    color: #fff;
+}
+
+/* ... (your existing styles) ... */
+
+.services-content-icon i {
+    color: maroon !important;
+}
+
+.services-inner h1,
+.services-inner h5 {
+    color: maroon;
+}
+
+.btn-secondary {
+    background-color: #800000; /* Maroon background */
+    border-color: #800000; /* Maroon border */
+    color: #FFFFFF; /* White text */
+}
+
+.btn-secondary:hover {
+    background-color: #600000; /* Darker shade of maroon for hover */
+    border-color: #600000;
+}
+.bg-primary {
+    background-color: #800000; /* Maroon background */
+}
+.blog .bg-primary {
+    background-color: #800000; /* Maroon background */
+}
+.blog h1, .blog h5, .blog p, .blog a {
+    color: #FFFFFF; /* White text */
+}
+
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(120, 0, 0);
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/* LOGO */
+.logo {
+  font-size: 26px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: #560000;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+  position: relative; 
+}
+
+.dropdown {
+  background-color: rgb(1, 139, 139);
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+  display: none;
+} 
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+ .menu {
+    display:none;
+    position: absolute;
+    background-color: rgb(120, 0, 0);
+    right: 0;
+    left: 0;
+    margin-top: 20px;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color:#560000;
+    transition: 0.3s ease;  
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+}
+.input1 {
+    border: solid 3px grey;
+    border-radius: 12px; /* You can adjust the value to control the roundness of the corners */
+    background-color: grey; /* Set the background color to match the border color */
+}
+.txt{
+    font-size: 24px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: #a70000;
+}
+.bttn{
+    background-color: rgb(225, 225, 225);
+}
+.logbtn{
+    background-color: rgb(225, 225, 225);
+}
+@media (max-width: 1168px) {
+    h2{
+  font-size: 28px;
+}
+.logo{
+    font-size: 20px;
+}
+}
+@media (min-width: 1168px) {
+    h2{
+  font-size: 48px;
+}
+}
+    </style>
+
 </head>
 <body>
 
-  <header style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <img src="images/logo2.png"  class="w-28 h-28 " >
-      
-      
-        <span style="color: white;font-size: 28px;font-weight: 700;" class="ml-3 text-xl">DHA Suffa University</span>
-      </a>
-      <nav style="font-size: 16px;" class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
-        <a href="about.html" class="mr-5 hover:text-gray-900">About Us</a>
-        <a href="services.html" class="mr-5 hover:text-gray-900">Services</a>
-        <a href="resources.html" class="mr-5 hover:text-gray-900">Resources</a>
-        <a href="job.html" class="mr-5 hover:text-gray-900">Job Portal</a>
-        <a href="opp.html" class="mr-5 hover:text-gray-900">Opportunities</a>
-        <a href="feedback.html" class="mr-5 hover:text-gray-900">Feedback</a>
-        <a href="contact.html" class="mr-5 hover:text-gray-900">Contact Us</a>
-      </nav>
-      <button style="z-index: 10;" class="scroll-to-top" onclick="scrollToTop()"></button>
-    </div>
-  </header>
-</header>
 
-      <section class="text-gray-600 body-font relative">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-12">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-900">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
-          </div>
-          <div class="lg:w-1/2 md:w-2/3 mx-auto">
-            <div class="flex flex-wrap -m-2">
-              <div class="p-2 w-1/2">
-                <div class="relative">
-                  <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
-                  <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                </div>
-              </div>
-              <div class="p-2 w-1/2">
-                <div class="relative">
-                  <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-                  <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                </div>
-              </div>
-              <div class="p-2 w-full">
-                <div class="relative">
-                  <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
-                  <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-                </div>
-              </div>
-              <div class="p-2 w-full">
-                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
-              </div>
-              <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                <a class="text-indigo-500">example@email.com</a>
-                <p class="leading-normal my-5 text-gray-900">DHA Suffa University
-                  <br>DHA Phase 7 ext, Karachi
-                </p>
-                <span class="inline-flex">
-                  <a class="text-gray-500">
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                    </svg>
-                  </a>
-                  <a class="ml-4 text-gray-500">
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                    </svg>
-                  </a>
-                  <a class="ml-4 text-gray-500">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                    </svg>
-                  </a>
-                  <a class="ml-4 text-gray-500">
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                    </svg>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
-        <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-          <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-            <a class="flex title-font font-medium items-center md:justify-start justify-center ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <span class="ml-3 text-xl">DHA Suffa University</span>
-            </a>
-            <p class="mt-2 text-sm ">Air plant banjo lyft occupy retro adaptogen indego</p>
-          </div>
-          <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
-              <nav class="list-none mb-10">
-                <li>
-                  <a class=" hover:text-gray-800">First Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Second Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Third Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Fourth Link</a>
-                </li>
-              </nav>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
-              <nav class="list-none mb-10">
-                <li>
-                  <a class=" hover:text-gray-800">First Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Second Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Third Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Fourth Link</a>
-                </li>
-              </nav>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
-              <nav class="list-none mb-10">
-                <li>
-                  <a class=" hover:text-gray-800">First Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Second Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Third Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Fourth Link</a>
-                </li>
-              </nav>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
-              <nav class="list-none mb-10">
-                <li>
-                  <a class=" hover:text-gray-800">First Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Second Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Third Link</a>
-                </li>
-                <li>
-                  <a class=" hover:text-gray-800">Fourth Link</a>
-                </li>
-              </nav>
-            </div>
-          </div>
-        </div>
-        <div style="background-color: rgb(53, 0, 0);color: white;">
-          <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-            <p class=" text-sm text-center sm:text-left">© 2020 Tailblocks —
-              <a  rel="noopener noreferrer" class=" ml-1" target="_blank">@Fahad-Ibtisam-Ibad</a>
-            </p>
-            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-              <a class="">
-                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                </svg>
-              </a>
-              <a class="ml-3 ">
-                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                </svg>
-              </a>
-              <a class="ml-3 ">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                </svg>
-              </a>
-              <a class="ml-3 ">
-                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                </svg>
-              </a>
-            </span>
-          </div>
-        </div>
-      </footer>
-    <script src="script.js"></script>
-    </body>
-    </html>
+    <nav style="z-index: 999;" class="navbar">
+        <!-- LOGO -->
+        <div style="display: flex;align-items: center;z-index: 999;" class="logo"><div  ><img style="height: 90px;width: 90px;" src="images/logo2.png" alt=""></div><h1 style="font-weight: 700;font-size: 26;color: #ffffff;">DHA Suffa University</h1> </div>
     
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+    
+          <!-- USING CHECKBOX HACK -->
+          <input style="z-index: 999;" type="checkbox" id="checkbox_toggle" />
+          <label style="z-index: 999;" for="checkbox_toggle" class="hamburger">&#9776;</label>
+    
+          <!-- NAVIGATION MENUS -->
+          <div style="z-index: 999;" class="menu">
+    
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="job.html">Job Portal</a></li>
+            <li><a href="opp.html">Opportunities</a></li>
+            <li><a href="/">Contact Us</a></li>
+           
+           
+          </div>
+        </ul>
+      </nav>
+
+
+    <section>
+    <div class="container-fluid py-5 mb-5">
+        <div class="container">
+            <div style="margin-top: 50px;margin-bottom: 30px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
+                <h2  class="text-center font-bold text-gray-900 ">Contact for</h2>  <h2 style="color: #a30000;margin-left: 12px;"  class="text-center  font-bold text-gray-900 ">any query</h2>
+              </div>
+            <div class="contact-detail position-relative p-5">
+                <div class="row g-5 mb-5 justify-content-center">
+                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                        <div class="d-flex  p-3 rounded bttn ">
+                            <div  class="flex-shrink-0 btn-square logbtn rounded-circle" style="width: 64px; height: 64px;">
+                                <img style="height: 45px;width: 45px;margin-left: 9px;margin-top: 6px;" src="images/university.png" alt="">
+                            </div>
+                            <div class="ms-3 ">
+                                <h4 class="txt">Address</h4>
+                                <a href="https://goo.gl/maps/Zd4BCynmTb98ivUJ6" target="_blank" class="h5">DSU, DHA Phase 7 Ext</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                        <div class="d-flex  p-3 rounded bttn">
+                            <div  class="flex-shrink-0 btn-square logbtn rounded-circle" style="width: 64px; height: 64px;">
+                                <img style="height: 42px;width: 42px;margin-left: 11px;margin-top: 11px;" src="images/telephone.png" alt="">
+                            </div>
+                            <div class="ms-3 ">
+                              
+                                <h4  class="txt">Call Us</h4>
+                                <a class="h5" href="tel:+0123456789" target="_blank">(021) 35244851 Ext 180</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
+                        <div class="d-flex  p-3 rounded bttn">
+                            <div  class="flex-shrink-0 btn-square logbtn  rounded-circle" style="width: 64px; height: 64px;">
+                                <img style="height: 45px;width: 45px;margin-left: 9px;margin-top: 9px;" src="images/mail.png" alt="">
+                            </div>
+                            <div class="ms-3 ">
+                                <h4 class="txt">Email Us</h4>
+                                <a class="h5" href="mailto:info@example.com" target="_blank">cscr@dsu.edu.pk</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                        <div style="border: solid 3px gray;"  class=" h-100  rounded contact-map">
+                         <iframe class="rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4869.069321839725!2d67.07865708174778!3d24.814681155000866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c62f239e641%3A0x4e41a2d7dd487cfc!2sDHA%20Suffa%20University!5e0!3m2!1sen!2s!4v1704477861705!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                        <div class=" rounded contact-form">
+                            <div class="mb-4 input1">
+                                <input type="text" class="form-control border-0 py-3" placeholder="Your Name">
+                            </div>
+                            <div class="mb-4 input1">
+                                <input type="email" class="form-control border-0 py-3" placeholder="Your Email">
+                            </div>
+                            <div class="mb-4 input1">
+                                <input type="text" class="form-control border-0 py-3" placeholder="Project">
+                            </div>
+                            <div class="mb-4 input1">
+                                <textarea class="w-100 form-control border-0 py-3" rows="6" cols="10" placeholder="Message"></textarea>
+                            </div>
+                            <div class="text-start">
+                                <button style="background-color: #970000;" class="btn  text-white py-3 px-5" type="button">Send Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+</section>
+
+
+<footer style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
+    <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center ">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl">DHA Suffa University</span>
+        </a>
+        <p class="mt-2 text-sm ">Air plant banjo lyft occupy retro adaptogen indego</p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: rgb(53, 0, 0);color: white;">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class=" text-sm text-center sm:text-left">© 2020 Tailblocks —
+          <a  rel="noopener noreferrer" class=" ml-1" target="_blank">@Fahad-Ibtisam-Ibad</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 ">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 ">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 ">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+</body>
+</html>
