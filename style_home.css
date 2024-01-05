@@ -899,3 +899,9 @@ body {
 .ft1{
     background-color: white;
 }
+.divider {
+    width: 95%;
+    margin: 20px auto;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #6c0000, transparent);
+}
