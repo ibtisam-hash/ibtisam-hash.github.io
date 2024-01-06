@@ -23,26 +23,217 @@
     <!-- Libraries Stylesheet -->
     <link href="./lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="./bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="./style_j2.css" rel="stylesheet">
-</head>
+    <style>
 
-<body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-maroon" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-       
-        <!-- Carousel Start -->
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #790000; 
+            color: #fff;
+            padding-top: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 8px;
+            
+            display: none;
+            border: none;
+            border-radius: 4px;
+           
+        }
+        
+        /* Style for the arrow icon */
+        .scroll-to-top::before {
+            content: "\2191"; /* Unicode arrow-up character */
+            font-size: 20px;
+        }
+        #abc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .divider {
+            width: 95%;
+            margin: 20px auto;
+            height: 4px;
+            background: linear-gradient(to right, transparent, #6c0000, transparent);
+        }
+        
+        /* NAVBAR STYLING STARTS */
+        .navbar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px;
+          background-color: rgb(120, 0, 0);
+          color: #fff;
+        }
+        
+        .nav-links a {
+          color: #fff;
+        }
+        
+        /* LOGO */
+        .logo {
+          font-size: 26px;
+          color: #ffffff;
+        }
+        
+        /* NAVBAR MENU */
+        .menu {
+          display: flex;
+          gap: 1em;
+          font-size: 18px;
+        }
+        
+        .menu li:hover {
+          background-color: #560000;
+          border-radius: 5px;
+          transition: 0.3s ease;
+        }
+        
+        .menu li {
+          padding: 5px 14px;
+        }
+        
+        /* DROPDOWN MENU */
+        .services {
+          position: relative; 
+        }
+        
+        .dropdown {
+          background-color: rgb(1, 139, 139);
+          padding: 1em 0;
+          position: absolute; /*WITH RESPECT TO PARENT*/
+          display: none;
+          border-radius: 8px;
+          top: 35px;
+        }
+        
+        .dropdown li + li {
+          margin-top: 10px;
+        }
+        
+        .dropdown li {
+          padding: 0.5em 1em;
+          width: 8em;
+          text-align: center;
+        }
+        
+        .dropdown li:hover {
+          background-color: #4c9e9e;
+        }
+        
+        .services:hover .dropdown {
+          display: block;
+        }
+        
+        /* RESPONSIVE NAVBAR MENU STARTS */
+        
+        /* CHECKBOX HACK */
+        
+        input[type=checkbox] {
+          display: none;
+        } 
+        
+        /* HAMBURGER MENU */
+        .hamburger {
+          display: none;
+          font-size: 24px;
+          user-select: none;
+        }
+        
+        /* APPLYING MEDIA QUERIES */
+        @media (max-width: 768px) {
+         .menu {
+            display:none;
+            position: absolute;
+            background-color: rgb(120, 0, 0);
+            right: 0;
+            left: 0;
+            margin-top: 20px;
+            text-align: center;
+            padding: 16px 0;
+          }
+        
+          .menu li:hover {
+            display: inline-block;
+            background-color:#560000;
+            transition: 0.3s ease;  
+          }
+        
+          .menu li + li {
+            margin-top: 12px;
+          }
+        
+          input[type=checkbox]:checked ~ .menu {
+            display: block;
+          }
+        
+          .hamburger {
+            display: block;
+          }
+        
+          .dropdown {
+            left: 50%;
+            top: 30px;
+            transform: translateX(35%);
+          }
+        
+          .dropdown li:hover {
+            background-color: #4c9e9e;
+          }
+        }
+        .btn-secondary {
+            background-color: #800000; /* Maroon background */
+            border-color: #a10000; /* Maroon border */
+            color: #FFFFFF; /* White text */
+        }
+        @media (max-width: 1168px) {
+        
+        .logo{
+          font-size: 20px;
+        }
+        
+        
+        }
+            </style>
+        </head>
+        <body>
+          <nav style="z-index: 999;" class="navbar">
+            <!-- LOGO -->
+            <div style="display: flex;align-items: center;z-index: 999;" class="logo"><div  ><img style="height: 90px;width: 90px;" src="images/logo2.png" alt=""></div><h1 style="font-weight: 700;font-size: 26;color: #ffffff;">DHA Suffa University</h1> </div>
+        
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+        
+              <!-- USING CHECKBOX HACK -->
+              <input style="z-index: 999;" type="checkbox" id="checkbox_toggle" />
+              <label style="z-index: 999;" for="checkbox_toggle" class="hamburger">&#9776;</label>
+        
+              <!-- NAVIGATION MENUS -->
+              <div style="z-index: 999;" class="menu">
+        
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="job.html">Job Portal</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+               
+               
+              </div>
+            </ul>
+          </nav>
+           <!-- Carousel Start -->
         <div class="container-fluid p-0">
             <div class="owl-carousel header-carousel position-relative">
                 <div class="owl-carousel-item position-relative">
@@ -79,43 +270,14 @@
         </div>
         <!-- Carousel End -->
 
-<section class="searchContainer">
-        <!-- Search Start -->
-        <div class="container-fluid bg- mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
-            <div class="container">
-                <div class="row g-2">
-                    <div class="col-md-10">
-                        <div class="row g-2">
-                            <div class="col-md-4">
-                                <input type="text" class="form-control border-0" placeholder="Keyword" />
-                            </div>
-                            <div class="col-md-4">
-                                <select class="form-select border-0">
-                                    <option selected>Category</option>
-                                    <option value="1">Category 1</option>
-                                    <option value="2">Category 2</option>
-                                    <option value="3">Category 3</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <select class="form-select border-0">
-                                    <option selected>Location</option>
-                                    <option value="1">Location 1</option>
-                                    <option value="2">Location 2</option>
-                                    <option value="3">Location 3</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-dark border-0 w-100">Search</button>
-                    </div>
-                </div>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-maroon" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
-    </section>
-        <!-- Search End -->
-
+        <!-- Spinner End -->
 
         <!-- Category Start -->
         <div class="container-xxl py-5">
@@ -184,44 +346,46 @@
             </div>
         </div>
         <!-- Category End -->
-        <div style="margin-bottom: 50px;" id="abc">   <div class="divider"></div></div>
 
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="row g-0 about-bg rounded overflow-hidden">
-                            <div class="col-6 text-start">
-                                <img class="img-fluid w-100" src="./images/about-1.jpg">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid" src="./images/about-2.jpg" style="width: 85%; margin-top: 15%;">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid" src="./images/about-3.jpg" style="width: 85%;">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid w-100" src="./images/about-4.jpg">
+
+        <div style="margin-bottom: 50px;" id="abc">   <div class="divider"></div></div>
+        <section class="searchContainer">
+            <!-- Search Start -->
+            <div class="container-fluid bg- mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+                <div class="container">
+                    <div class="row g-2">
+                        <div class="col-md-10">
+                            <div class="row g-2">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control border-0" placeholder="Keyword" />
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-select border-0">
+                                        <option selected>Category</option>
+                                        <option value="1">Category 1</option>
+                                        <option value="2">Category 2</option>
+                                        <option value="3">Category 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-select border-0">
+                                        <option selected>Location</option>
+                                        <option value="1">Location 1</option>
+                                        <option value="2">Location 2</option>
+                                        <option value="3">Location 3</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                         
-                        <h1 class="mb-4">We Help To Get The Best Job And Find A Talent</h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p><i class="fa fa-check text-maroon me-3"></i>Tempor erat elitr rebum at clita</p>
-                        <p><i class="fa fa-check text-maroon me-3"></i>Aliqu diam amet diam et eos</p>
-                        <p><i class="fa fa-check text-maroon me-3"></i>Clita duo justo magna dolore erat amet</p>
-                        <a class="btn btn-maroon py-3 px-5 mt-3" href="">Read More</a>
+                        <div class="col-md-2">
+                            <button class="btn btn-dark border-0 w-100">Search</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- About End -->
-
-        <div style="margin-bottom: 50px;" id="abc">   <div class="divider"></div></div>
-
+        </section>
+            <!-- Search End -->
+            <div style="margin-bottom: 50px;" id="abc">   <div class="divider"></div></div>
         <!-- Jobs Start -->
         <div class="container-xxl py-5">
             <div class="container">
@@ -230,23 +394,6 @@
                   </div>
                 <!-- <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Job Listing</h1> -->
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-                                <h6 class="mt-n1 mb-0">Featured</h6>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-                                <h6 class="mt-n1 mb-0">Full Time</h6>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                                <h6 class="mt-n1 mb-0">Part Time</h6>
-                            </a>
-                        </li>
-                    </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="job-item p-4 mb-4">
@@ -623,7 +770,7 @@
         <!-- Testimonial End -->
 
         
-
+        <div style="margin-bottom: 50px;" id="abc">   <div class="divider"></div></div>
 
 
         <!-- Back to Top -->
@@ -644,5 +791,119 @@
     <!-- Template Javascript -->
     <script src="./main.js"></script>
 </body>
+<footer style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
+    <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center ">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="ml-3 text-xl">DHA Suffa University</span>
+        </a>
+        <p class="mt-2 text-sm ">Air plant banjo lyft occupy retro adaptogen indego</p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">First Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Second Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Third Link</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: rgb(53, 0, 0);color: white;">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class=" text-sm text-center sm:text-left">© 2020 Tailblocks —
+          <a  rel="noopener noreferrer" class=" ml-1" target="_blank">@Fahad-Ibtisam-Ibad</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 ">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 ">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 ">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
 
 </html>
