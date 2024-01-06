@@ -1,0 +1,187 @@
+/********** Template CSS **********/
+:root {
+    --primary: maroon;
+    --secondary: white;
+    --light: white;
+    --dark: maroon;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+    background-color: maroon;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+    background-color: maroon;
+
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+    background-color: maroon;
+
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+    background-color: maroon;
+
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+    background-color: maroon;
+
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 2px;
+    background-color: maroon;
+
+}
+
+
+
+/*** About ***/
+.about-bg {
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -o-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-size: 5px 5px;
+}
+
+
+/*** Category ***/
+.cat-item {
+    display: block;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    border: 1px solid transparent;
+    transition: .5s;
+}
+
+.cat-item:hover {
+    border-color: rgba(0, 0, 0, .08);
+    box-shadow: none;
+}
+
+
+/*** Job Listing ***/
+.nav-pills .nav-item .active {
+    border-bottom: 2px solid var(--primary);
+}
+
+.job-item {
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.job-item:hover {
+    border-color: rgba(0, 0, 0, .08);
+    box-shadow: none;
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-item .testimonial-item,
+.testimonial-carousel .owl-item.center .testimonial-item * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item * {
+    color: #FFFFFF !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 5px solid var(--primary);
+    border-radius: 2px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--dark);
+    border-color: var(--primary);
+}
+
+
+.searchContainer{
+    background-color: maroon;
+}
+.fa {
+    color: #800000; /* Maroon color */
+}
+.divider {
+    width: 95%;
+    margin: 20px auto;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #6c0000, transparent);
+}
+
+.cat-item p {
+    color: gray; /* Maroon color */
+}
+.fa-check {
+    color: #800000; /* Maroon color */
+}
+.col-lg-6 .fa-check {
+    color: #800000; /* Maroon color */
+}
+
