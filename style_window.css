@@ -32,6 +32,8 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    margin-right: 15px;
+    margin-top: 4px;
   }
   
   .close:hover,
