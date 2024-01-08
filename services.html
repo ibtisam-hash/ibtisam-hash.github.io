@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="stylesheet" href="style_window.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
 
@@ -166,23 +166,48 @@ input[type=checkbox] {
   .dropdown li:hover {
     background-color: #4c9e9e;
   }
+
+  .heading1 {
+  font-size: 28px;
+  }
+
+  .heading1 {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 1168px) {
 
-.logo{
-  font-size: 20px;
+.logo {
+  font-size: 18px;
+}
+.evnts{
+  font-size: 42px;
+}
+h1 {
+    font-size: 32px;
+  }
+.heading1 {
+  font-size: 48px;
 }
 
-
 }
+@media (min-width: 1168px) {
 
+  .heading1 {
+  font-size: 58px;
+  }
+}
+.window_heading{
+  font-size: 22px;
+  font-weight: 500;
+}
     </style>
 </head>
 <body>
   <nav style="z-index: 999;" class="navbar">
     <!-- LOGO -->
-    <div style="display: flex;align-items: center;z-index: 999;" class="logo"><div  ><img style="height: 90px;width: 90px;" src="images/logo2.png" alt=""></div><h1 style="color: white; font-weight: 700;font-size: 26;">DHA Suffa University</h1> </div>
+    <div style="display: flex;align-items: center;z-index: 999;" class="logo"><div  ><img style="height: 90px;width: 90px;" src="images/logo2.png" alt=""></div><h2 style="color: white; font-weight: 700;font-size: 26;">DHA Suffa University</h2> </div>
 
     <!-- NAVIGATION MENU -->
     <ul class="nav-links">
@@ -200,14 +225,14 @@ input[type=checkbox] {
         <li><a href="resources.html">Resources</a></li>
         <li><a href="job.html">Job Portal</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li style="background-color: rgb(207, 207, 207);border-radius: 10px;color: #790000;"><a style="color: #890000;font-weight: 600;" href="form.html">Login →</a></li>
+        <li style="background-color: rgb(207, 207, 207);border-radius: 10px;color: #790000;"><a style="color: #890000;font-weight: 600;" href="contact.html">Login →</a></li>
        
        
       </div>
     </ul>
   </nav>
 
-    <section style="margin-top: 30px;" class="text-gray-600 body-font">
+    <section style="margin-top: 30px;" class="text-gray-600 body-font m-2">
   <div class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center">
     <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
       <h1 class="title-font sm:text-5xl text-4xl mb-4 font-medium text-gray-900 font-bold">Services Provided at DSU
@@ -225,11 +250,11 @@ input[type=checkbox] {
 <div style="margin-top: 0px;" id="abc">   <div class="divider"></div></div>
    
       
-      <section style="background-color: white;" class="text-gray-600 body-font">
+      <section style="background-color: white;" class="text-gray-600 body-font m-2">
         <div class="container px-5 py-4 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
             <div style="margin-top: 40px;margin-bottom: 2px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
-                <h2  class="text-center text-6xl font-bold text-gray-900 ">Our</h2>  <h2 style="color: #a30000;margin-left: 12px;"  class="text-center text-6xl font-bold text-gray-900 ">Events</h2>
+                <h2  class="text-center font-bold text-gray-900 evnts">Our</h2>  <h2 style="color: #a30000;margin-left: 8px;"  class="text-center font-bold text-gray-900 evnts">Events</h2>
               </div>
             <p style="margin-top: 20px;" class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
           </div>
@@ -237,60 +262,67 @@ input[type=checkbox] {
             <div class="lg:w-1/3 sm:w-1/2 p-4">
               <div class="flex relative">
                 <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://th.bing.com/th/id/R.eb4e847df0fa071cefea84c6374d8ec4?rik=U%2b47ONGjVTrbug&pid=ImgRaw&r=0">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
+                 
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
                   <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
+
                 </div>
               </div>
             </div>
             <div class="lg:w-1/3 sm:w-1/2 p-4">
               <div class="flex relative">
                 <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://th.bing.com/th/id/OIF.H8D1HMizzzxkZ9PiNrHg0Q?rs=1&pid=ImgDetMain">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
+                 
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
                   <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
                 </div>
               </div>
             </div>
             <div class="lg:w-1/3 sm:w-1/2 p-4">
               <div class="flex relative">
                 <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://sites.udmercy.edu/campusconnection/wp-content/uploads/sites/106/2019/03/careerfair.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
+                 
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
                   <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
                 </div>
               </div>
             </div>
             <div class="lg:w-1/3 sm:w-1/2 p-4">
               <div class="flex relative">
                 <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://www.dsu.edu.pk/wp-content/uploads/2023/10/1-3-2048x1365.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
+                 
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
                   <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
                 </div>
               </div>
             </div>
             <div class="lg:w-1/3 sm:w-1/2 p-4">
               <div class="flex relative">
                 <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://www.dsu.edu.pk/wp-content/uploads/2023/10/WhatsApp-Image-2023-09-26-at-3.13.35-PM.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
+                 
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
                   <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
                 </div>
               </div>
             </div>
             <div class="lg:w-1/3 sm:w-1/2 p-4">
               <div class="flex relative">
                 <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://www.dsu.edu.pk/wp-content/uploads/2023/10/WhatsApp-Image-2023-09-26-at-3.13.24-PM-2.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
+                 
                   <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
                   <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
                 </div>
               </div>
             </div>
@@ -298,15 +330,15 @@ input[type=checkbox] {
         </div>
       </section>
       <div style="margin-top: 50px;" id="abc">   <div class="divider"></div></div>
-   
-      
+  
+  
    
    <div style="margin-top: 80px;margin-bottom: 2px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
-        <h2  class="text-center text-6xl font-bold text-gray-900 ">Recruitment</h2>  <h2 style="color: #a30000;margin-left: 12px;"  class="text-center text-6xl font-bold text-gray-900 ">Drives</h2>
+        <h1  class="text-center heading2 font-bold text-gray-900 ">Recruitment</h1>  <h1 style="color: #a30000;margin-left: 8px;"  class="text-center heading2 font-bold text-gray-900 ">Drives</h1>
       </div>
-      <section class="text-gray-600 body-font">
+      <section class="text-gray-600 body-font m-2">
         <div class="container px-5 py-4 mx-auto flex flex-wrap">
-          <div class="lg:w-1/2 w-full  mb-10 lg:mb-0 rounded-lg overflow-hidden">
+          <div id="imgg1" class="lg:w-1/2 w-full  mb-10 lg:mb-0 rounded-lg overflow-hidden">
             <img style="height: 600px;" alt="feature" class="object-cover object-center  w-full" src="images/rec.jpg">
           </div>
           <div class="flex flex-col flex-wrap lg:py-16 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
@@ -315,11 +347,8 @@ input[type=checkbox] {
               <div class="flex-grow">
                 <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Industry Level Recruitments</h2>
                 <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <a class=" text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
+          
               </div>
             </div>
             <div class="flex flex-col mb-10 lg:items-start items-center">
@@ -327,11 +356,8 @@ input[type=checkbox] {
               <div class="flex-grow">
                 <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Startup Recruitments</h2>
                 <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <a class=" text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
+          
               </div>
             </div>
             <div class="flex flex-col mb-10 lg:items-start items-center">
@@ -339,24 +365,56 @@ input[type=checkbox] {
               <div class="flex-grow">
                 <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Company Specific Recruiments</h2>
                 <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
+                <a class=" text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
+          
               </div>
             </div>
           </div>
         </div>
       </section>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-5 py-14 md:flex-row flex-col items-center">
+        <div style="margin-top: -10%;" class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1   class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 font-bold">Annual Futsal Tournament 2024
+           
+          </h1>
+        
+          <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+          
+          <h3 class="window_heading">Date: 2nd January 2024</h3>
+          <h3 class="window_heading">Time: 9:30 AM</h3>
+          <h3 class="window_heading">Location: DHA Suffa University</h3>
+          
+          <div class="flex justify-center">
+
+         </div>
+        </div>
+        <div style="margin-top: -2%;" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <img style="border: solid 4px gray;" class="object-cover object-center rounded" alt="hero" src="https://th.bing.com/th/id/OIF.H8D1HMizzzxkZ9PiNrHg0Q?rs=1&pid=ImgDetMain">
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>
+
       <div  id="abc">   <div class="divider"></div></div>
    
 
       <div style="margin-top: 80px;margin-bottom: 2px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
-        <h2  class="text-center text-6xl font-bold text-gray-900 ">Career</h2>  <h2 style="color: #a30000;margin-left: 12px;"  class="text-center text-6xl font-bold text-gray-900 ">Fair</h2>
+        <h2  class="text-center  font-bold text-gray-900 evnts">Career</h2>  <h2 style="color: #a30000;margin-left: 8px;"  class="text-center  font-bold text-gray-900 evnts">Fair</h2>
       </div>
 
-      <section style="margin-bottom: 60px;" class="text-gray-600 body-font">
+      <section style="margin-bottom: 60px;" class="text-gray-600 body-font m-2">
         <div class="container mx-auto flex px-5 py-14 md:flex-row flex-col items-center">
           <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
             <img class="object-cover object-center rounded" alt="hero" src="https://szabist-isb.edu.pk/wp-content/uploads/2020/06/jobfair.jpg">
@@ -520,6 +578,44 @@ window.addEventListener("scroll", function() {
         scrollButton.style.display = "none";
     }
 });
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get all buttons with the common class
+var buttons = document.getElementsByClassName("modal-btn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Function to open the modal
+function openModal() {
+  modal.style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// Attach click event handlers to all buttons
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = openModal;
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = closeModal;
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+
+
       </script>
 </body>
 </html>
