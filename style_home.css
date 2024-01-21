@@ -865,6 +865,9 @@ justify-content: space-evenly;
 h2{
   font-size: 28px;
 }
+.ss1{
+    margin-top: 25px;
+}
 }
 @media (min-width: 1168px) {
 
@@ -891,6 +894,10 @@ h2{
 }
 h2{
   font-size: 45px;
+}
+
+.ss1{
+    margin-top: 100px;
 }
 }
 body {
