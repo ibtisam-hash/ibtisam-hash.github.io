@@ -3,184 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap.min.css" rel="stylesheet">
-
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-   
-    <title>Contact Us- CSCR DSU</title>
-    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
-
-
+    <title>Document</title>
     <style>
 
-        
-.services .services-item {
-    box-shadow: 0 0 60px rgba(0, 0, 0, .2);
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    padding: 10px 0;
-    position: relative;
-    background-color: #800000; /* Maroon background */
-    color: #FFFFFF; /* White text */
-}
 
-.services-content::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0;
-    top: 0;
-    left: 0;
-    border-radius: 10px 10px 0 0;
-    background: #800000; /* Maroon background */
-    transition: .5s;
+.social-btn1:hover{
+color: #560000;
 }
-
-.services-content::after {
-    top: 0;
-    bottom: auto;
-    border-radius: 10px 10px 10px 10px;
-}
-
-.services-item:hover .services-content::after {
-    height: 100%;
-    opacity: 1;
-    transition: .5s;
-}
-
-.services-item:hover .services-content-icon {
-    position: relative;
-    z-index: 2;
-}
-
-.services-item .services-content-icon i,
-.services-item .services-content-icon p {
-    transition: .5s;
-}
-
-.services-item:hover .services-content-icon i {
-    color: #800000; /* Maroon icons */
-}
-
-.services-item:hover .services-content-icon p {
-    color: #FFFFFF; /* White text */
-}
-
-/* Additional styles for buttons and other elements, if needed */
-.btn-primary, .carousel-content-btn1, .carousel-content-btn2 {
-    background-color: #800000; /* Maroon buttons */
-    border-color: #800000;
-    color: #FFFFFF; /* White text */
-}
-
-.btn-primary:hover, .carousel-content-btn1:hover, .carousel-content-btn2:hover {
-    background-color: #600000; /* Darker shade of maroon for hover */
-    border-color: #600000;
-}
-
-/* Specific to the 'Fact Start' section */
-.container-fluid.bg-secondary.py-5 {
-    background-color: #800000;
-}
-
-/* gpt additional style */
-.services .services-item {
-    box-shadow: 0 0 60px rgba(0, 0, 0, .2);
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    padding: 10px 0;
-    position: relative;
-}
-
-
-.services-content::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0;
-    top: 0;
-    left: 0;
-    border-radius: 10px 10px 0 0;
-    background: maroon;
-    transition: .5s;
-}
-
-.services-content::after {
-    top: 0;
-    bottom: auto;
-    border-radius: 10px 10px 10px 10px;
-}
-
-.services-item:hover .services-content::after {
-    height: 100%;
-    opacity: 1;
-    transition: .5s;
-}
-
-.services-item:hover .services-content-icon {
-    position: relative;
-    z-index: 2;
-}
-
-.services-item .services-content-icon i,
-.services-item .services-content-icon p {
-    transition: .5s;
-}
-
-.services-item:hover .services-content-icon i {
-    color: var(--bs-secondary) !important;
-}
-
-.services-item:hover .services-content-icon p {
-    color: var(--bs-white);
-}
-/* ... (your existing styles) ... */
-
-.services-content-icon a.btn {
-    background-color: maroon;
-    color: #fff;
-}
-
-.services-inner h1,
-.services-inner h5 {
-    color: #fff;
-}
-
-/* ... (your existing styles) ... */
-
-.services-content-icon i {
-    color: maroon !important;
-}
-
-.services-inner h1,
-.services-inner h5 {
-    color: maroon;
-}
-
-.btn-secondary {
-    background-color: #800000; /* Maroon background */
-    border-color: #800000; /* Maroon border */
-    color: #FFFFFF; /* White text */
-}
-
-.btn-secondary:hover {
-    background-color: #600000; /* Darker shade of maroon for hover */
-    border-color: #600000;
-}
-.bg-primary {
-    background-color: #800000; /* Maroon background */
-}
-.blog .bg-primary {
-    background-color: #800000; /* Maroon background */
-}
-.blog h1, .blog h5, .blog p, .blog a {
-    color: #FFFFFF; /* White text */
-}
-
-
-/* NAVBAR STYLING STARTS */
+        /* NAVBAR STYLING STARTS */
 .navbar {
   display: flex;
   align-items: center;
@@ -305,151 +136,225 @@ input[type=checkbox] {
     background-color: #4c9e9e;
   }
 }
-.input1 {
-    border: solid 2px grey;
-    border-radius: 7px; /* You can adjust the value to control the roundness of the corners */
-    background-color: grey; /* Set the background color to match the border color */
-}
-.txt{
-    font-size: 22px;
-    margin-bottom: 3px;
-    font-weight: 600;
-    color: #a70000;
-}
-.bttn{
-    background-color: rgb(225, 225, 225);
-}
-.logbtn{
-    background-color: rgb(225, 225, 225);
-}
-@media (max-width: 1168px) {
-    h2{
-  font-size: 28px;
-}
-.logo{
-    font-size: 20px;
-}
-}
-@media (min-width: 1168px) {
-    h2{
-  font-size: 48px;
-}
-/* LOGO */
-.logo {
-  font-size: 26px;
-}
-}
-    </style>
 
+
+        .div1{
+            display: flex;
+            justify-content: space-evenly;
+           margin-left: 3%;
+           margin-right: 3%;
+        }
+        .div2{
+            display: block;
+            width: 36%;
+        }
+        .div3{
+          
+            padding-left: 6%;
+            padding-right: 6%;
+            padding-top: 6%;
+            padding-bottom: 6%;
+            margin-left: 4%;
+            margin-right: 3%;
+            margin-top: 7%;
+            margin-bottom: 7%;
+            border-radius: 10px;
+            background-color: rgb(218, 218, 218);
+            display: flex;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .div2-map {
+            width: 55%;
+            margin-top: 2.4%;
+            margin-bottom: 2.5%;
+            overflow: hidden;
+            border-radius: 20px;
+
+        } 
+
+        h2{
+  font-size: 42px;
+ font-weight: 600;
+}
+
+.contact-section{
+    margin-top:5%;
+    margin-bottom: 7%;
+}
+.div5{
+   margin-left: 20px;
+    
+}
+.div5 h1{
+   color: #9d0000;
+   font-size: 22px;
+   font-weight: 500;
+}
+.div5 p{
+   color: #000000;
+   font-size: 18px;
+   font-weight: 400;
+   
+}
+.div4 img{
+    width: 50px;
+    
+}
+
+
+        @media (max-width: 1168px) {
+            .div1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+      
+        }
+        .div2{
+            display: block;
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2%;
+        }
+        .div2-map {
+            width: 88%;
+            height: 400px;
+            border-radius: 20px;
+        } 
+        .div3{
+            padding-left: 6%;
+            padding-right: 6%;
+            padding-top: 6%;
+            padding-bottom: 6%;
+            margin-left: 3%;
+            margin-right: 3%;
+            margin-top: 9%;
+            margin-bottom: 7%;
+            border-radius: 10px;
+            background-color: rgb(218, 218, 218);
+            display: flex;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        h2{
+      margin-top: 5%;
+      margin-bottom: 6%;
+  font-size: 32px;
+  font-weight: 600;
+}
+.contact-section{
+    margin-top:5%;
+    margin-bottom: 12%;
+}
+        }
+
+    </style>
 </head>
 <body>
 
 
-  <nav style="z-index: 999;" class="navbar">
-    <!-- LOGO -->
-    <div style="display: flex;align-items: center;z-index: 999;" class="logo"><div  ><img style="height: 90px;width: 90px;" src="images/logo2.png" alt=""></div><h1 style="color: white; font-weight: 700;font-size: 26;">DHA Suffa University</h1> </div>
+    <nav style="z-index: 999;" class="navbar">
+        <!-- LOGO -->
+        <div style="display: flex;align-items: center;z-index: 999;" class="logo"><div  ><img style="height: 90px;width: 90px;" src="images/logo2.png" alt=""></div><h1 style="color: white; font-weight: 700;font-size: 26;">DHA Suffa University</h1> </div>
+    
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+    
+          <!-- USING CHECKBOX HACK -->
+          <input style="z-index: 999;" type="checkbox" id="checkbox_toggle" />
+          <label style="z-index: 999;" for="checkbox_toggle" class="hamburger">&#9776;</label>
+    
+          <!-- NAVIGATION MENUS -->
+          <div style="z-index: 999;" class="menu">
+    
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="careerfair.html">Career Fair</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+         
+           
+          </div>
+        </ul>
+      </nav>
 
-    <!-- NAVIGATION MENU -->
-    <ul class="nav-links">
+    <section class="contact-section">
 
-      <!-- USING CHECKBOX HACK -->
-      <input style="z-index: 999;" type="checkbox" id="checkbox_toggle" />
-      <label style="z-index: 999;" for="checkbox_toggle" class="hamburger">&#9776;</label>
-
-      <!-- NAVIGATION MENUS -->
-      <div style="z-index: 999;" class="menu">
-
-           <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="careerfair.html">Career Fair</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-     
-       
-      </div>
-    </ul>
-  </nav>
-
-    <section>
-    <div class="container-fluid py-5 mb-5">
-        <div class="container">
-            <div style="margin-top: 50px;margin-bottom: 30px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
-                <h2  class="text-center font-bold text-gray-900 ">Contact for</h2>  <h2 style="color: #a30000;margin-left: 12px;"  class="text-center  font-bold text-gray-900 ">any query</h2>
-              </div>
-            <div class="contact-detail position-relative p-2">
-                <div class="row g-5 mb-5 justify-content-center">
-                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
-                        <div class="d-flex  p-3 rounded bttn ">
-                            <div  class="flex-shrink-0 btn-square logbtn rounded-circle" style="width: 64px; height: 64px;">
-                                <img style="height: 45px;width: 45px;margin-left: 9px;margin-top: 6px;" src="images/university.png" alt="">
-                            </div>
-                            <div class="ms-3 ">
-                                <h4 class="txt">Address</h4>
-                                <a href="https://goo.gl/maps/Zd4BCynmTb98ivUJ6" target="_blank" class="h5">DSU, DHA Phase 7 Ext</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class="d-flex  p-3 rounded bttn">
-                            <div  class="flex-shrink-0 btn-square logbtn rounded-circle" style="width: 64px; height: 64px;">
-                                <img style="height: 42px;width: 42px;margin-left: 11px;margin-top: 11px;" src="images/telephone.png" alt="">
-                            </div>
-                            <div class="ms-3 ">
-                              
-                                <h4  class="txt">Call Us</h4>
-                                <a class="h5" href="tel:+0123456789" target="_blank">(021) 35244851 Ext 180</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
-                        <div class="d-flex  p-3 rounded bttn">
-                            <div  class="flex-shrink-0 btn-square logbtn  rounded-circle" style="width: 64px; height: 64px;">
-                                <img style="height: 45px;width: 45px;margin-left: 9px;margin-top: 9px;" src="images/mail.png" alt="">
-                            </div>
-                            <div class="ms-3 ">
-                                <h4 class="txt">Email Us</h4>
-                                <a class="h5" href="mailto:info@example.com" target="_blank">cscr@dsu.edu.pk</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
-                        <div style="border: solid 3px gray;"  class=" h-100  rounded contact-map">
-                         <iframe class="rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4869.069321839725!2d67.07865708174778!3d24.814681155000866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c62f239e641%3A0x4e41a2d7dd487cfc!2sDHA%20Suffa%20University!5e0!3m2!1sen!2s!4v1704477861705!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class=" rounded contact-form">
-                            <div class="mb-4 input1">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Your Name">
-                            </div>
-                            <div class="mb-4 input1">
-                                <input type="email" class="form-control border-0 py-3" placeholder="Your Email">
-                            </div>
-                            <div class="mb-4 input1">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Project">
-                            </div>
-                            <div class="mb-4 input1">
-                                <textarea class="w-100 form-control border-0 py-3" rows="6" cols="10" placeholder="Message"></textarea>
-                            </div>
-                            <div class="text-start">
-                                <button style="background-color: #970000;" class="btn  text-white py-3 px-5" type="button">Send Message</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div style="margin-top: 50px;margin-bottom: 30px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
+            <h2  class="text-center  text-gray-900 ">Contact us for</h2>  <h2 style="color: #a30000;margin-left: 10px;"  class="text-center   text-gray-900 ">any query</h2>
+          </div>
+        <div class="div1">
+            <div class="div2-map" style="border: solid 3px gray;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4869.069321839725!2d67.07865708174778!3d24.814681155000866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c62f239e641%3A0x4e41a2d7dd487cfc!2sDHA%20Suffa%20University!5e0!3m2!1sen!2s!4v1704477861705!5m2!1sen!2s"
+                    style="border: 0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-        </div> 
-    </div>
 
-</section>
+            <div class="div2">
+              <div class="div3">
+                <div class="div4">
+                    <img src="images/university.png" alt="">
+                </div>
+                <div class="div4">
+                    <div class="div5">
+                        <h1>
+                            Address
+                        </h1>
+                        <p>
+                            DSU, DHA Phase 7 Ext
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div class="div3">
+                <div class="div4">
+                    <img src="images/telephone.png" alt="">
+                </div>
+                <div class="div4">
+                    <div class="div5">
+                        <h1>
+                            Call Us
+                        </h1>
+                        <p>
+                            (021) 35244851 Ext 180
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div class="div3">
+                <div class="div4">
+                    <img src="images/mail.png" alt="">
+                </div>
+                <div class="div4">
+                    <div class="div5">
+                        <h1>
+                            Email Us
+                        </h1>
+                        <p>
+                            cscr@dsu.edu.pk
+                        </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+    </section>
 
 
-      <footer style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
+
+
+
+
+ 
+    <footer style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
        
         <div style="background-color: rgb(122, 0, 0);color: white;">
-          <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+          <div class="container mx-auto py-8 px-5 flex flex-wrap flex-col sm:flex-row">
             <p class=" text-sm text-center sm:text-left">© 2024 —
               <a  rel="noopener noreferrer" class=" ml-1 social-btn1" target="_blank">@DHA Suffa University</a>
             </p>
@@ -476,6 +381,9 @@ input[type=checkbox] {
           </div>
         </div>
       </footer>
+  
+
+
 
 
 
