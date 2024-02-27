@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Customized Bootstrap Stylesheet -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style_job.css" />
+    <title>Document</title>
+
+    <style>
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #790000;
+        color: #fff;
+        padding-top: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 8px;
+
+        display: none;
+        border: none;
+        border-radius: 4px;
+      }
+
+      /* Style for the arrow icon */
+      .scroll-to-top::before {
+        content: "\2191"; /* Unicode arrow-up character */
+        font-size: 20px;
+      }
+      #abc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .divider {
+        width: 95%;
+        margin: 20px auto;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #6c0000,
+          transparent
+        );
+      }
+
+      /* NAVBAR STYLING STARTS */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: rgb(120, 0, 0);
+        color: #fff;
+      }
+
+      .nav-links a {
+        color: #fff;
+      }
+
+      /* LOGO */
+      .logo {
+        font-size: 26px;
+        color: #ffffff;
+      }
+
+      /* NAVBAR MENU */
+      .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 18px;
+      }
+
+      .menu li:hover {
+        background-color: #560000;
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
+
+      .menu li {
+        padding: 5px 14px;
+      }
+
+      /* DROPDOWN MENU */
+      .services {
+        position: relative;
+      }
+
+      .dropdown {
+        background-color: rgb(1, 139, 139);
+        padding: 1em 0;
+        position: absolute; /*WITH RESPECT TO PARENT*/
+        display: none;
+        border-radius: 8px;
+        top: 35px;
+      }
+
+      .dropdown li + li {
+        margin-top: 10px;
+      }
+
+      .dropdown li {
+        padding: 0.5em 1em;
+        width: 8em;
+        text-align: center;
+      }
+
+      .dropdown li:hover {
+        background-color: #4c9e9e;
+      }
+
+      .services:hover .dropdown {
+        display: block;
+      }
+
+      /* RESPONSIVE NAVBAR MENU STARTS */
+
+      /* CHECKBOX HACK */
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      /* HAMBURGER MENU */
+      .hamburger {
+        display: none;
+        font-size: 24px;
+        user-select: none;
+      }
+
+      /* APPLYING MEDIA QUERIES */
+      @media (max-width: 768px) {
+        .menu {
+          display: none;
+          position: absolute;
+          background-color: rgb(120, 0, 0);
+          right: 0;
+          left: 0;
+          margin-top: 20px;
+          text-align: center;
+          padding: 16px 0;
+        }
+
+        .menu li:hover {
+          display: inline-block;
+          background-color: #560000;
+          transition: 0.3s ease;
+        }
+
+        .menu li + li {
+          margin-top: 12px;
+        }
+
+        input[type="checkbox"]:checked ~ .menu {
+          display: block;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .dropdown {
+          left: 50%;
+          top: 30px;
+          transform: translateX(35%);
+        }
+
+        .dropdown li:hover {
+          background-color: #4c9e9e;
+        }
+      }
+      .btn-secondary {
+        background-color: #800000; /* Maroon background */
+        border-color: #a10000; /* Maroon border */
+        color: #ffffff; /* White text */
+      }
+      @media (max-width: 1168px) {
+        .logo {
+          font-size: 20px;
+        }
+      }
+
+      .hero {
+        display: grid;
+        position: relative;
+        grid-template-columns: 100vw;
+        grid-template-rows: 100vh;
+        place-items: center;
+        overflow: hidden;
+        animation: clip-hero-anim 1.25s cubic-bezier(0.29, 0.8, 0.8, 0.98);
+        will-change: clip-path;
+      }
+      .hero__bg,
+      .hero__cnt {
+        align-self: center;
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+      .hero__bg {
+        display: grid;
+        position: relative;
+        z-index: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+        animation: fade-in 0.75s linear;
+        will-change: opacity;
+      }
+      .hero__bg::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 5;
+        top: -10%;
+        right: -10%;
+        bottom: -10%;
+        left: -10%;
+        background: rgba(41, 4, 47, 0.4);
+        background-blend-mode: screen;
+      }
+      .hero__bg picture {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        animation: scaling-hero-anim 4s 0.25s cubic-bezier(0, 0.71, 0.4, 0.97)
+          forwards;
+        will-change: transform;
+      }
+      .hero__bg img {
+        display: block;
+        object-fit: cover;
+        object-position: 77% 50%;
+        height: auto;
+        width: 100%;
+      }
+      .hero__cnt {
+        display: grid;
+        position: relative;
+        place-items: center;
+        z-index: 10;
+        color: #fff;
+        font-size: 2.5vw;
+        text-transform: uppercase;
+        opacity: 0;
+        animation: fade-in 0.75s 1.5s linear forwards;
+      }
+      .hero__cnt svg {
+        height: 12vw;
+      }
+      .hero__cnt svg path {
+        fill: #fff;
+      }
+      .hero__cnt h1 {
+        margin-bottom: 0;
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes scaling-hero-anim {
+        from {
+          transform: scale(1.25);
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+      @keyframes clip-hero-anim {
+        from {
+          clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+        }
+        to {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+      }
+
+      /********** Template CSS **********/
+      :root {
+        --primary: maroon;
+        --secondary: white;
+        --light: white;
+        --dark: maroon;
+      }
+
+      .back-to-top {
+        position: fixed;
+        display: none;
+        right: 45px;
+        bottom: 45px;
+        z-index: 99;
+      }
+
+      /*** Spinner ***/
+      #spinner {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+        z-index: 99999;
+      }
+
+      #spinner.show {
+        transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      /*** Button ***/
+      .btn {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        transition: 0.5s;
+        background-color: maroon;
+      }
+
+      .btn.btn-primary,
+      .btn.btn-secondary {
+        color: #ffffff;
+        background-color: maroon;
+      }
+
+      .btn-square {
+        width: 38px;
+        height: 38px;
+        background-color: maroon;
+      }
+
+      .btn-sm-square {
+        width: 32px;
+        height: 32px;
+        background-color: maroon;
+      }
+
+      .btn-lg-square {
+        width: 48px;
+        height: 48px;
+        background-color: maroon;
+      }
+
+      .btn-square,
+      .btn-sm-square,
+      .btn-lg-square {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: normal;
+        border-radius: 2px;
+        background-color: maroon;
+      }
+
+      /*** About ***/
+      .about-bg {
+        background-image: -webkit-repeating-radial-gradient(
+          center center,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2) 1px,
+          transparent 1px,
+          transparent 100%
+        );
+        background-image: -moz-repeating-radial-gradient(
+          center center,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2) 1px,
+          transparent 1px,
+          transparent 100%
+        );
+        background-image: -ms-repeating-radial-gradient(
+          center center,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2) 1px,
+          transparent 1px,
+          transparent 100%
+        );
+        background-image: -o-repeating-radial-gradient(
+          center center,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2) 1px,
+          transparent 1px,
+          transparent 100%
+        );
+        background-image: repeating-radial-gradient(
+          center center,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2) 1px,
+          transparent 1px,
+          transparent 100%
+        );
+        background-size: 5px 5px;
+      }
+
+      /*** Category ***/
+      .cat-item {
+        display: block;
+        box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+        border: 1px solid transparent;
+        transition: 0.5s;
+      }
+
+      .cat-item:hover {
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: none;
+      }
+
+      /*** Job Listing ***/
+      .nav-pills .nav-item .active {
+        border-bottom: 2px solid var(--primary);
+      }
+
+      .job-item {
+        border: 1px solid transparent;
+        border-radius: 2px;
+        box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+        transition: 0.5s;
+      }
+
+      .job-item:hover {
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: none;
+      }
+
+      /*** Testimonial ***/
+      .testimonial-carousel .owl-item .testimonial-item,
+      .testimonial-carousel .owl-item.center .testimonial-item * {
+        transition: 0.5s;
+      }
+
+      .testimonial-carousel .owl-item.center .testimonial-item {
+        background: var(--primary) !important;
+      }
+
+      .testimonial-carousel .owl-item.center .testimonial-item * {
+        color: #ffffff !important;
+      }
+
+      .testimonial-carousel .owl-dots {
+        margin-top: 24px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .testimonial-carousel .owl-dot {
+        position: relative;
+        display: inline-block;
+        margin: 0 5px;
+        width: 15px;
+        height: 15px;
+        border: 5px solid var(--primary);
+        border-radius: 2px;
+        transition: 0.5s;
+      }
+
+      .testimonial-carousel .owl-dot.active {
+        background: var(--dark);
+        border-color: var(--primary);
+      }
+
+      .searchContainer {
+        background-color: maroon;
+      }
+      .fa {
+        color: #800000; /* Maroon color */
+      }
+      .divider {
+        width: 95%;
+        margin: 20px auto;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #6c0000,
+          transparent
+        );
+      }
+      .divider3 {
+        width: 95%;
+
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #6c0000,
+          transparent
+        );
+      }
+      .cat-item p {
+        color: gray; /* Maroon color */
+      }
+      .fa-check {
+        color: #800000; /* Maroon color */
+      }
+      .col-lg-6 .fa-check {
+        color: #800000; /* Maroon color */
+      }
+
+      /* ibtism CSSS */
+    </style>
+  </head>
+  <body>
+    <nav style="z-index: 999" class="navbar">
+      <!-- LOGO -->
+      <div
+        style="display: flex; align-items: center; z-index: 999"
+        class="logo"
+      >
+        <div>
+          <img
+            style="height: 90px; width: 90px"
+            src="images/logo2.png"
+            alt=""
+          />
+        </div>
+        <h1 style="color: white; font-weight: 700; font-size: 26">
+          DHA Suffa University
+        </h1>
+      </div>
+
+      <!-- NAVIGATION MENU -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input style="z-index: 999" type="checkbox" id="checkbox_toggle" />
+        <label style="z-index: 999" for="checkbox_toggle" class="hamburger"
+          >&#9776;</label
+        >
+
+        <!-- NAVIGATION MENUS -->
+        <div style="z-index: 999" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="job.html">Job Portal</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="hero__bg">
+        <picture>
+          <img src="images/hero_1.jpg" />
+        </picture>
+      </div>
+
+      <div class="hero__cnt">
+        <div class="text-center">
+          <h1
+            style="color: white"
+            class="sm:text-4xl text-2xl font-medium text-center title-font mb-4 font-bold"
+          >
+            Search for Your Jobs Here
+          </h1>
+        </div>
+
+        <div class="container1">
+          <div id="hhh" class="form-field">
+            <label style="color: white" for="jobTitle">Job Title</label>
+            <input
+              class="input"
+              type="text"
+              id="jobTitle"
+              name="jobTitle"
+              placeholder="Enter a Job Title"
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="label1" for="location">Location</label>
+            <select id="location" name="location">
+              <option>Select a Location</option>
+              <option value="karachi">Karachi</option>
+              <option value="lahore">Lahore</option>
+              <option value="islamabad">Islamabad</option>
+              <option value="peshawar">Peshawar</option>
+              <option value="quetta">Quetta</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label class="label1" for="jobType">Job Type</label>
+            <select id="jobType" name="jobType">
+              <option>Select the Job Type</option>
+              <option value="part Time">Part Time</option>
+              <option value="full Time">Full Time</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <button
+            onclick="searchJobs()"
+            class="mt-5 inline-flex text-white bg-indigo-500 border-0 py-2 px-12 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 3px" id="abc"><div class="divider3"></div></div>
+
+    <div
+      style="
+        margin-top: 60px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+      "
+      id="projects"
+      class="circle-text heading1"
+    >
+      <h2 class="text-center text-4xl font-bold text-gray-900">Current Job</h2>
+      <h2
+        style="color: #a30000; margin-left: 12px"
+        class="text-center text-4xl font-bold text-gray-900"
+      >
+        Listings
+      </h2>
+    </div>
+
+    <section id="jobCardsContainer">
+      <div class="job-cards1">
+        <div class="cards1">
+          <div class="div1">
+            <div class="img1">
+              <img src="images/logo2.png" alt="" />
+            </div>
+            <div class="job-heading1">
+              <h1 id="department" class="job-heading2">Software Developer</h1>
+              <h2 class="job-heading3">Voxtron</h2>
+            </div>
+          </div>
+          <div class="div2">
+            <div class="locate">
+              <div class="location-image">
+                <img src="images/pin2.png" alt="" />
+              </div>
+              <div>
+                <p style="margin-left: 6px">Karachi, Pakistan</p>
+              </div>
+            </div>
+            <div id="location" class="job-status-full">
+              <p class="job-status">Full Time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="job-cards1">
+        <div class="cards1">
+          <div class="div1">
+            <div class="img1">
+              <img src="images/logo2.png" alt="" />
+            </div>
+            <div class="job-heading1">
+              <h1 id="department" class="job-heading2">Mechanical Engineer</h1>
+              <h2 class="job-heading3">KESC</h2>
+            </div>
+          </div>
+          <div class="div2">
+            <div class="locate">
+              <div class="location-image">
+                <img src="images/pin2.png" alt="" />
+              </div>
+              <div>
+                <p id="location" style="margin-left: 6px">Karachi, Pakistan</p>
+              </div>
+            </div>
+            <div class="job-status-full">
+              <p class="job-status">Full Time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="job-cards1">
+        <div class="cards1">
+          <div class="div1">
+            <div class="img1">
+              <img src="images/logo2.png" alt="" />
+            </div>
+            <div class="job-heading1">
+              <h1 id="department" class="job-heading2">Mechanical Engineer</h1>
+              <h2 class="job-heading3">KESC</h2>
+            </div>
+          </div>
+          <div class="div2">
+            <div class="locate">
+              <div class="location-image">
+                <img src="images/pin2.png" alt="" />
+              </div>
+              <div>
+                <p id="location" style="margin-left: 6px">Karachi, Pakistan</p>
+              </div>
+            </div>
+            <div class="job-status-part">
+              <p class="job-status">Part Time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="job-cards1">
+        <div class="cards1">
+          <div class="div1">
+            <div class="img1">
+              <img src="images/logo2.png" alt="" />
+            </div>
+            <div class="job-heading1">
+              <h1 id="department" class="job-heading2">Finance Officer</h1>
+              <h2 class="job-heading3">XYZ</h2>
+            </div>
+          </div>
+          <div class="div2">
+            <div class="locate">
+              <div class="location-image">
+                <img src="images/pin2.png" alt="" />
+              </div>
+              <div>
+                <p id="location" style="margin-left: 6px">
+                  Islamabad, Pakistan
+                </p>
+              </div>
+            </div>
+            <div class="job-status-full">
+              <p class="job-status">Full Time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="job-cards1">
+        <div class="cards1">
+          <div class="div1">
+            <div class="img1">
+              <img src="images/logo2.png" alt="" />
+            </div>
+            <div class="job-heading1">
+              <h1 id="department" class="job-heading2">Electrical Engineer</h1>
+              <h2 class="job-heading3">Voxtron</h2>
+            </div>
+          </div>
+          <div class="div2">
+            <div class="locate">
+              <div class="location-image">
+                <img src="images/pin2.png" alt="" />
+              </div>
+              <div>
+                <p id="location" style="margin-left: 6px">Lahore, Pakistan</p>
+              </div>
+            </div>
+            <div class="job-status-full">
+              <p class="job-status">Full Time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div style="margin-top: 60px; margin-bottom: 5px" id="abc">
+      <div class="divider"></div>
+    </div>
+
+    <footer
+      style="background-color: rgb(131, 0, 0); color: white"
+      class="body-font"
+    >
+      <div
+        class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+      >
+        <div
+          class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left"
+        >
+          <a
+            class="flex title-font font-medium items-center md:justify-start justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+              ></path>
+            </svg>
+            <span class="ml-3 text-xl">DHA Suffa University</span>
+          </a>
+          <p class="mt-5 text-sm"></p>
+        </div>
+        <div
+          class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center"
+        >
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium tracking-widest text-sm mb-3">
+              CATEGORIES
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a class="hover:text-gray-800">First Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Second Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Third Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Fourth Link</a>
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium tracking-widest text-sm mb-3">
+              CATEGORIES
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a class="hover:text-gray-800">First Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Second Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Third Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Fourth Link</a>
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium tracking-widest text-sm mb-3">
+              CATEGORIES
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a class="hover:text-gray-800">First Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Second Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Third Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Fourth Link</a>
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium tracking-widest text-sm mb-3">
+              CATEGORIES
+            </h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a class="hover:text-gray-800">First Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Second Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Third Link</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-800">Fourth Link</a>
+              </li>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div style="background-color: rgb(53, 0, 0); color: white">
+        <div
+          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <p class="text-sm text-center sm:text-left">
+            © 2020 Tailblocks —
+            <a rel="noopener noreferrer" class="ml-1" target="_blank"
+              >@Fahad-Ibtisam-Ibad</a
+            >
+          </p>
+          <span
+            class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
+          >
+            <a class="">
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a class="ml-3">
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                ></path>
+              </svg>
+            </a>
+            <a class="ml-3">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                ></path>
+              </svg>
+            </a>
+            <a class="ml-3">
+              <svg
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="none"
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="./lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+      function searchJobs() {
+        // Get the input values from the form
+        var jobTitle = document
+          .getElementById("jobTitle")
+          .value.toLowerCase()
+          .split(" ");
+        var locationFilter = document
+          .getElementById("location")
+          .value.toLowerCase()
+          .split(" ");
+        var jobType = document.getElementById("jobType").value.toLowerCase();
+
+        console.log("Job Title:", jobTitle);
+        console.log("Location:", locationFilter);
+        console.log("Job Type:", jobType);
+
+        // Get all job cards
+        var jobCards = document.querySelectorAll(".job-cards1");
+
+        // Loop through each job card and check if it contains all search terms
+        jobCards.forEach(function (card) {
+          var cardTitle = card
+            .querySelector(".job-heading2")
+            .textContent.toLowerCase();
+          var cardLocation = card.querySelector("p").textContent.toLowerCase();
+          var cardType = card
+            .querySelector(".job-status")
+            .textContent.toLowerCase();
+
+          console.log("Card Title:", cardTitle);
+          console.log("Card Location:", cardLocation);
+          console.log("Card Type:", cardType);
+
+          // Check if all search terms are present in the card, if yes, show the card
+          if (
+            jobTitle.every((term) => cardTitle.includes(term)) &&
+            (locationFilter[0] === "select" ||
+              locationFilter.every((term) => cardLocation.includes(term))) &&
+            (jobType === "select the job type" ||
+              jobType === "" ||
+              jobType.split(" ").every((term) => cardType.includes(term)))
+          ) {
+            card.style.display = "block"; // Show the card
+          } else {
+            card.style.display = "none"; // Hide the card
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
