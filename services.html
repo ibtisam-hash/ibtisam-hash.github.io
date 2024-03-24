@@ -1,598 +1,957 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style_window.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Services- CSCR DSU</title>
-    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style_window.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
 
     <style>
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #790000;
+        color: #fff;
+        padding-top: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 8px;
 
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #790000; 
-    color: #fff;
-    padding-top: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 8px;
-    
-    display: none;
-    border: none;
-    border-radius: 4px;
-   
-}
+        display: none;
+        border: none;
+        border-radius: 4px;
+      }
 
-/* Style for the arrow icon */
-.scroll-to-top::before {
-    content: "\2191"; /* Unicode arrow-up character */
-    font-size: 20px;
-}
-#abc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.divider {
-    width: 95%;
-    margin: 20px auto;
-    height: 4px;
-    background: linear-gradient(to right, transparent, #6c0000, transparent);
-}
+      /* Style for the arrow icon */
+      .scroll-to-top::before {
+        content: "\2191"; /* Unicode arrow-up character */
+        font-size: 20px;
+      }
+      #abc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .divider {
+        width: 95%;
+        margin: 20px auto;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #6c0000,
+          transparent
+        );
+      }
 
-/* NAVBAR STYLING STARTS */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: rgb(120, 0, 0);
-  color: #fff;
-}
+      /* NAVBAR STYLING STARTS */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: rgb(120, 0, 0);
+        color: #fff;
+      }
 
-.nav-links a {
-  color: #fff;
-}
+      .btn-secondary {
+        background-color: #800000; /* Maroon background */
+        border-color: #a10000; /* Maroon border */
+        color: #ffffff; /* White text */
+      }
+      .social-btn1:hover {
+        color: #560000;
+      }
+      .nav-links a {
+        color: #fff;
+      }
 
-/* LOGO */
-.logo {
-  font-size: 26px;
-}
+      /* LOGO */
+      .logo {
+        font-size: 26px;
+      }
 
-/* NAVBAR MENU */
-.menu {
-  display: flex;
-  gap: 1em;
-  font-size: 18px;
-}
+      /* NAVBAR MENU */
+      .menu {
+        display: flex;
+        gap: 1em;
+        font-size: 18px;
+      }
 
-.menu li:hover {
-  background-color: #560000;
-  border-radius: 5px;
-  transition: 0.3s ease;
-}
+      .menu li:hover {
+        background-color: #560000;
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
 
-.menu li {
-  padding: 5px 14px;
-}
+      .menu li {
+        padding: 5px 14px;
+      }
 
-/* DROPDOWN MENU */
-.services {
-  position: relative; 
-}
+      /* DROPDOWN MENU */
+      .services {
+        position: relative;
+      }
 
-.dropdown {
-  background-color: rgb(1, 139, 139);
-  padding: 1em 0;
-  position: absolute; /*WITH RESPECT TO PARENT*/
-  display: none;
-  border-radius: 8px;
-  top: 35px;
-}
+      .dropdown {
+        background-color: rgb(1, 139, 139);
+        padding: 1em 0;
+        position: absolute; /*WITH RESPECT TO PARENT*/
+        display: none;
+        border-radius: 8px;
+        top: 35px;
+      }
 
-.dropdown li + li {
-  margin-top: 10px;
-}
+      .dropdown li + li {
+        margin-top: 10px;
+      }
 
-.dropdown li {
-  padding: 0.5em 1em;
-  width: 8em;
-  text-align: center;
-}
+      .dropdown li {
+        padding: 0.5em 1em;
+        width: 8em;
+        text-align: center;
+      }
 
-.dropdown li:hover {
-  background-color: #4c9e9e;
-}
+      .dropdown li:hover {
+        background-color: #4c9e9e;
+      }
 
-.services:hover .dropdown {
-  display: block;
-}
+      .services:hover .dropdown {
+        display: block;
+      }
 
-/* RESPONSIVE NAVBAR MENU STARTS */
+      /* RESPONSIVE NAVBAR MENU STARTS */
 
-/* CHECKBOX HACK */
+      /* CHECKBOX HACK */
 
-input[type=checkbox] {
-  display: none;
-} 
+      input[type="checkbox"] {
+        display: none;
+      }
 
-/* HAMBURGER MENU */
-.hamburger {
-  display: none;
-  font-size: 24px;
-  user-select: none;
-}
+      /* HAMBURGER MENU */
+      .hamburger {
+        display: none;
+        font-size: 24px;
+        user-select: none;
+      }
 
-/* APPLYING MEDIA QUERIES */
-@media (max-width: 768px) {
- .menu {
-    display:none;
-    position: absolute;
-    background-color: rgb(120, 0, 0);
-    right: 0;
-    left: 0;
-    margin-top: 20px;
-    text-align: center;
-    padding: 16px 0;
-  }
+      /* APPLYING MEDIA QUERIES */
+      @media (max-width: 768px) {
+        .menu {
+          display: none;
+          position: absolute;
+          background-color: rgb(120, 0, 0);
+          right: 0;
+          left: 0;
+          margin-top: 20px;
+          text-align: center;
+          padding: 16px 0;
+        }
 
-  .menu li:hover {
-    display: inline-block;
-    background-color:#560000;
-    transition: 0.3s ease;  
-  }
+        .menu li:hover {
+          display: inline-block;
+          background-color: #560000;
+          transition: 0.3s ease;
+        }
 
-  .menu li + li {
-    margin-top: 12px;
-  }
+        .menu li + li {
+          margin-top: 12px;
+        }
 
-  input[type=checkbox]:checked ~ .menu {
-    display: block;
-  }
+        input[type="checkbox"]:checked ~ .menu {
+          display: block;
+        }
 
-  .hamburger {
-    display: block;
-  }
+        .hamburger {
+          display: block;
+        }
 
-  .dropdown {
-    left: 50%;
-    top: 30px;
-    transform: translateX(35%);
-  }
+        .dropdown {
+          left: 50%;
+          top: 30px;
+          transform: translateX(35%);
+        }
 
-  .dropdown li:hover {
-    background-color: #4c9e9e;
-  }
+        .dropdown li:hover {
+          background-color: #4c9e9e;
+        }
 
-  .heading1 {
-  font-size: 28px;
-  }
+        .heading1 {
+          font-size: 28px;
+        }
 
-  .heading1 {
-    font-size: 32px;
-  }
-}
+        .heading1 {
+          font-size: 32px;
+        }
+      }
 
-@media (max-width: 1168px) {
-
-.logo {
-  font-size: 18px;
-}
-.evnts{
-  font-size: 42px;
-}
-h1 {
-    font-size: 32px;
-  }
-.heading1 {
-  font-size: 48px;
-}
-
-}
-@media (min-width: 1168px) {
-
-  .heading1 {
-  font-size: 58px;
-  }
-}
-.window_heading{
-  font-size: 22px;
-  font-weight: 500;
-}
+      @media (max-width: 1168px) {
+        .logo {
+          font-size: 18px;
+        }
+        .evnts {
+          font-size: 42px;
+        }
+        h1 {
+          font-size: 32px;
+        }
+        .heading1 {
+          font-size: 48px;
+        }
+        .rdc {
+          font-size: 19px;
+          margin-bottom: 16px;
+          margin-top: 50px;
+          font-weight: 500;
+        }
+      }
+      @media (min-width: 1168px) {
+        .heading1 {
+          font-size: 58px;
+        }
+        .rdc {
+          font-size: 29px;
+          margin-bottom: 17px;
+          margin-top: 10px;
+          font-weight: 400;
+        }
+        #cs_c {
+          margin-top: 40px;
+        }
+      }
+      .window_heading {
+        font-size: 22px;
+        font-weight: 500;
+      }
     </style>
-</head>
-<body>
-  <nav style="z-index: 999;" class="navbar">
-    <!-- LOGO -->
-    <div style="display: flex;align-items: center;z-index: 999;" class="logo"><div  ><img style="height: 90px;width: 90px;" src="images/logo2.png" alt=""></div><h2 style="color: white; font-weight: 700;font-size: 26;">DHA Suffa University</h2> </div>
-
-    <!-- NAVIGATION MENU -->
-    <ul class="nav-links">
-
-      <!-- USING CHECKBOX HACK -->
-      <input style="z-index: 999;" type="checkbox" id="checkbox_toggle" />
-      <label style="z-index: 999;" for="checkbox_toggle" class="hamburger">&#9776;</label>
-
-      <!-- NAVIGATION MENUS -->
-      <div style="z-index: 999;" class="menu">
-
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="job.html">Job Portal</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li style="background-color: rgb(207, 207, 207);border-radius: 10px;color: #790000;"><a style="color: #890000;font-weight: 600;" href="contact.html">Login →</a></li>
-       
-       
+  </head>
+  <body>
+    <nav style="z-index: 999" class="navbar">
+      <!-- LOGO -->
+      <div
+        style="display: flex; align-items: center; z-index: 999"
+        class="logo"
+      >
+        <div>
+          <img
+            style="height: 90px; width: 90px"
+            src="images/logo2.png"
+            alt=""
+          />
+        </div>
+        <h2 style="color: white; font-weight: 700; font-size: 26">
+          DHA Suffa University
+        </h2>
       </div>
-    </ul>
-  </nav>
 
-    <section style="margin-top: 30px;" class="text-gray-600 body-font m-2">
-  <div class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-5xl text-4xl mb-4 font-medium text-gray-900 font-bold">Services Provided at DSU
-       
-      </h1>
-      <p style="margin-top: 20px;" class="mb-8 leading-relaxed">DSU offers a comprehensive suite of services, from state-of-the-art learning facilities to extensive career counseling and job placement assistance.</p>
-      <div class="flex justify-center">
-     </div>
-    </div>
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img class="object-cover object-center rounded" alt="hero" src="images/logo2.png">
-    </div>
-  </div>
-</section>
-<div style="margin-top: 0px;" id="abc">   <div class="divider"></div></div>
-   
-      
-      <section style="background-color: white;" class="text-gray-600 body-font m-2">
-        <div class="container px-5 py-4 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <div style="margin-top: 40px;margin-bottom: 2px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
-                <h2  class="text-center font-bold text-gray-900 evnts">Our</h2>  <h2 style="color: #a30000;margin-left: 8px;"  class="text-center font-bold text-gray-900 evnts">Events</h2>
-              </div>
-            <p style="margin-top: 20px;" class="lg:w-2/3 mx-auto leading-relaxed text-base">Discover, Engage, Excel: Dive into our curated events at DSU, where every occasion is an opportunity for growth, networking, and real-world experience. From academic symposiums to corporate meet-and-greets, our campus buzzes with activities that complement your academic journey and prepare you for the professional world.</p>
-          </div>
-          <div class="flex flex-wrap -m-4">
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://th.bing.com/th/id/R.eb4e847df0fa071cefea84c6374d8ec4?rik=U%2b47ONGjVTrbug&pid=ImgRaw&r=0">
-                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
-                 
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
+      <!-- NAVIGATION MENU -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input style="z-index: 999" type="checkbox" id="checkbox_toggle" />
+        <label style="z-index: 999" for="checkbox_toggle" class="hamburger"
+          >&#9776;</label
+        >
 
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://th.bing.com/th/id/OIF.H8D1HMizzzxkZ9PiNrHg0Q?rs=1&pid=ImgDetMain">
-                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
-                 
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://sites.udmercy.edu/campusconnection/wp-content/uploads/sites/106/2019/03/careerfair.jpg">
-                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
-                 
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://www.dsu.edu.pk/wp-content/uploads/2023/10/1-3-2048x1365.jpg">
-                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
-                 
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://www.dsu.edu.pk/wp-content/uploads/2023/10/WhatsApp-Image-2023-09-26-at-3.13.35-PM.jpg">
-                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
-                 
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
-                </div>
-              </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-              <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://www.dsu.edu.pk/wp-content/uploads/2023/10/WhatsApp-Image-2023-09-26-at-3.13.24-PM-2.jpg">
-                <div class="px-8 py-10 relative  w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100">
-                 
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                  <a class="mt-3 text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- NAVIGATION MENUS -->
+        <div style="z-index: 999" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Career Fair</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="job.html">Job Portal</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </div>
-      </section>
-      <div style="margin-top: 50px;" id="abc">   <div class="divider"></div></div>
-  
-  
-   
-   <div style="margin-top: 80px;margin-bottom: 2px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
-        <h1  class="text-center heading2 font-bold text-gray-900 ">Recruitment</h1>  <h1 style="color: #a30000;margin-left: 8px;"  class="text-center heading2 font-bold text-gray-900 ">Drives</h1>
-      </div>
-      <section class="text-gray-600 body-font m-2">
-        <div class="container px-5 py-4 mx-auto flex flex-wrap">
-          <div id="imgg1" class="lg:w-1/2 w-full  mb-10 lg:mb-0 rounded-lg overflow-hidden">
-            <img style="height: 600px;" alt="feature" class="object-cover object-center  w-full" src="images/rec.jpg">
+      </ul>
+    </nav>
+
+    <section style="margin-top: 30px" class="text-gray-600 body-font m-2">
+      <div
+        class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center"
+      >
+        <div
+          class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+        >
+          <div
+            style="
+              margin-top: 40px;
+              margin-bottom: 2px;
+              display: flex;
+              justify-content: center;
+            "
+            id="projects"
+            class="circle-text heading1"
+          >
+            <h1 class="text-center heading2 text-gray-900">Services</h1>
+            <h1
+              style="color: #a30000; margin-left: 13px"
+              class="text-center heading2 text-gray-900"
+            >
+              DSU Offers
+            </h1>
           </div>
-          <div class="flex flex-col flex-wrap lg:py-16 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-            <div class="flex flex-col mb-10 lg:items-start items-center">
-            
-              <div class="flex-grow">
-                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Industry Level Recruitments</h2>
-                <p class="leading-relaxed text-base">Experience the gateway to your dream career with our industry-level recruitments, connecting you with top-tier companies and a spectrum of professional opportunities.</p>
-                <a class=" text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
-          
-              </div>
-            </div>
-            <div class="flex flex-col mb-10 lg:items-start items-center">
-            
-              <div class="flex-grow">
-                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Startup Recruitments</h2>
-                <p class="leading-relaxed text-base">Dive into the dynamic world of startups with our specialized recruitment sessions, offering unique roles in innovative environments for the entrepreneurial-minded.</p>
-                <a class=" text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
-          
-              </div>
-            </div>
-            <div class="flex flex-col mb-10 lg:items-start items-center">
-            
-              <div class="flex-grow">
-                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Company Specific Recruiments</h2>
-                <p class="leading-relaxed text-base">Tailor your career path with our company-specific recruitment drives, designed to align your skills and aspirations with the needs of leading organizations in your field.</p>
-                <a class=" text-indigo-500 inline-flex  modal-btn" >  <button style="font-size: 16px;" class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Details</button></a>
-          
-              </div>
-            </div>
-          </div>
+          <p style="margin-top: 20px" class="mb-8 leading-relaxed">
+            Our university is committed to providing a comprehensive range of
+            services to support the diverse needs of our students. From academic
+            assistance to career guidance and wellness resources, we strive to
+            empower students to thrive both inside and outside the classroom.
+            Our services include tutoring and academic advising to help students
+            excel in their studies, career counseling and internships to prepare
+            for future endeavors, and wellness programs to promote mental and
+            physical well-being.
+          </p>
+          <div class="flex justify-center"></div>
         </div>
-      </section>
-
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <section class="text-gray-600 body-font">
-      <div class="container mx-auto flex px-5 py-14 md:flex-row flex-col items-center">
-        <div style="margin-top: -10%;" class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1   class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 font-bold">Annual Futsal Tournament 2024
-           
-          </h1>
-        
-          <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-          
-          <h3 class="window_heading">Date: 2nd January 2024</h3>
-          <h3 class="window_heading">Time: 9:30 AM</h3>
-          <h3 class="window_heading">Location: DHA Suffa University</h3>
-          
-          <div class="flex justify-center">
-
-         </div>
-        </div>
-        <div style="margin-top: -2%;" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img style="border: solid 4px gray;" class="object-cover object-center rounded" alt="hero" src="https://th.bing.com/th/id/OIF.H8D1HMizzzxkZ9PiNrHg0Q?rs=1&pid=ImgDetMain">
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <img
+            class="object-cover object-center rounded"
+            alt="hero"
+            src="images/logo2.png"
+          />
         </div>
       </div>
     </section>
-  </div>
+    <div style="margin-top: 0px" id="abc"><div class="divider"></div></div>
 
-</div>
-
-      <div  id="abc">   <div class="divider"></div></div>
-   
-
-      <div style="margin-top: 80px;margin-bottom: 2px;display: flex;justify-content: center;" id="projects" class="circle-text heading1">
-        <h2  class="text-center  font-bold text-gray-900 evnts">Career</h2>  <h2 style="color: #a30000;margin-left: 8px;"  class="text-center  font-bold text-gray-900 evnts">Fair</h2>
+    <!-- <section
+      style="background-color: white"
+      class="text-gray-600 body-font m-2"
+    >
+      <div class="container px-5 py-4 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <div
+            style="
+              margin-top: 40px;
+              margin-bottom: 2px;
+              display: flex;
+              justify-content: center;
+            "
+            id="projects"
+            class="circle-text heading1"
+          >
+            <h2 class="text-center font-bold text-gray-900 evnts">Our</h2>
+            <h2
+              style="color: #a30000; margin-left: 8px"
+              class="text-center font-bold text-gray-900 evnts"
+            >
+              Events
+            </h2>
+          </div>
+          <p
+            style="margin-top: 20px"
+            class="lg:w-2/3 mx-auto leading-relaxed text-base"
+          >
+            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
+            gentrify, subway tile poke farm-to-table. Franzen you probably
+            haven't heard of them man bun deep jianbing selfies heirloom.
+          </p>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative">
+              <img
+                alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center"
+                src="https://th.bing.com/th/id/R.eb4e847df0fa071cefea84c6374d8ec4?rik=U%2b47ONGjVTrbug&pid=ImgRaw&r=0"
+              />
+              <div
+                class="px-8 py-10 relative w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100"
+              >
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                  Shooting Stars
+                </h1>
+                <p class="leading-relaxed">
+                  Photo booth fam kinfolk cold-pressed sriracha leggings
+                  jianbing microdosing tousled waistcoat.
+                </p>
+                <a class="mt-3 text-indigo-500 inline-flex modal-btn">
+                  <button
+                    style="font-size: 16px"
+                    class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg"
+                  >
+                    Details
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative">
+              <img
+                alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center"
+                src="https://th.bing.com/th/id/OIF.H8D1HMizzzxkZ9PiNrHg0Q?rs=1&pid=ImgDetMain"
+              />
+              <div
+                class="px-8 py-10 relative w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100"
+              >
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                  The Catalyzer
+                </h1>
+                <p class="leading-relaxed">
+                  Photo booth fam kinfolk cold-pressed sriracha leggings
+                  jianbing microdosing tousled waistcoat.
+                </p>
+                <a class="mt-3 text-indigo-500 inline-flex modal-btn">
+                  <button
+                    style="font-size: 16px"
+                    class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg"
+                  >
+                    Details
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative">
+              <img
+                alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center"
+                src="https://sites.udmercy.edu/campusconnection/wp-content/uploads/sites/106/2019/03/careerfair.jpg"
+              />
+              <div
+                class="px-8 py-10 relative w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100"
+              >
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                  The 400 Blows
+                </h1>
+                <p class="leading-relaxed">
+                  Photo booth fam kinfolk cold-pressed sriracha leggings
+                  jianbing microdosing tousled waistcoat.
+                </p>
+                <a class="mt-3 text-indigo-500 inline-flex modal-btn">
+                  <button
+                    style="font-size: 16px"
+                    class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg"
+                  >
+                    Details
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative">
+              <img
+                alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center"
+                src="https://www.dsu.edu.pk/wp-content/uploads/2023/10/1-3-2048x1365.jpg"
+              />
+              <div
+                class="px-8 py-10 relative w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100"
+              >
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                  Neptune
+                </h1>
+                <p class="leading-relaxed">
+                  Photo booth fam kinfolk cold-pressed sriracha leggings
+                  jianbing microdosing tousled waistcoat.
+                </p>
+                <a class="mt-3 text-indigo-500 inline-flex modal-btn">
+                  <button
+                    style="font-size: 16px"
+                    class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg"
+                  >
+                    Details
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative">
+              <img
+                alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center"
+                src="https://www.dsu.edu.pk/wp-content/uploads/2023/10/WhatsApp-Image-2023-09-26-at-3.13.35-PM.jpg"
+              />
+              <div
+                class="px-8 py-10 relative w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100"
+              >
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                  Holden Caulfield
+                </h1>
+                <p class="leading-relaxed">
+                  Photo booth fam kinfolk cold-pressed sriracha leggings
+                  jianbing microdosing tousled waistcoat.
+                </p>
+                <a class="mt-3 text-indigo-500 inline-flex modal-btn">
+                  <button
+                    style="font-size: 16px"
+                    class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg"
+                  >
+                    Details
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative">
+              <img
+                alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center"
+                src="https://www.dsu.edu.pk/wp-content/uploads/2023/10/WhatsApp-Image-2023-09-26-at-3.13.24-PM-2.jpg"
+              />
+              <div
+                class="px-8 py-10 relative w-full border-4 border-gray-300 bg-gray-200 opacity-0 hover:opacity-100"
+              >
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                  Alper Kamu
+                </h1>
+                <p class="leading-relaxed">
+                  Photo booth fam kinfolk cold-pressed sriracha leggings
+                  jianbing microdosing tousled waistcoat.
+                </p>
+                <a class="mt-3 text-indigo-500 inline-flex modal-btn">
+                  <button
+                    style="font-size: 16px"
+                    class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg"
+                  >
+                    Details
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section> -->
+    <!-- <div style="margin-top: 50px" id="abc"><div class="divider"></div></div> -->
 
-      <section style="margin-bottom: 60px;" class="text-gray-600 body-font m-2">
-        <div class="container mx-auto flex px-5 py-14 md:flex-row flex-col items-center">
-          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-            <img class="object-cover object-center rounded" alt="hero" src="https://szabist-isb.edu.pk/wp-content/uploads/2020/06/jobfair.jpg">
+    <div
+      style="
+        margin-top: 80px;
+        margin-bottom: 2px;
+        display: flex;
+        justify-content: center;
+      "
+      id="projects"
+      class="circle-text heading1"
+    >
+      <h1 class="text-center heading2 text-gray-900">Recruitment</h1>
+      <h1
+        style="color: #a30000; margin-left: 8px"
+        class="text-center heading2 text-gray-900"
+      >
+        Drives
+      </h1>
+    </div>
+    <section class="text-gray-600 body-font m-2">
+      <div class="container px-5 py-4 mx-auto flex flex-wrap">
+        <div
+          id="imgg1"
+          class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden"
+        >
+          <img
+            style="height: 600px"
+            alt="feature"
+            class="object-cover object-center w-full"
+            src="images/rec.jpg"
+          />
+        </div>
+        <div
+          class="flex flex-col flex-wrap lg:py-16 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center"
+        >
+          <div class="flex flex-col mb-10 lg:items-start items-center">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+                Industry Level Recruitments
+              </h2>
+              <p class="leading-relaxed text-base">
+                Explore opportunities with top industry players at our
+                recruitment drives. Connect with leading companies, gain
+                insights into diverse career paths, and seize exciting job
+                prospects.
+              </p>
+              <!-- <a class="text-indigo-500 inline-flex modal-btn">
+                <button
+                  style="font-size: 16px"
+                  class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg"
+                >
+                  Details
+                </button></a
+              > -->
+            </div>
           </div>
-          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Join Us in Our Next Career Fair
-            
+          <div class="flex flex-col mb-10 lg:items-start items-center">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+                Startup Recruitments
+              </h2>
+              <p class="leading-relaxed text-base">
+                Embrace innovation and entrepreneurship at our startup
+                recruitment events. Engage with dynamic startups, discover
+                disruptive ideas, and be part of groundbreaking ventures.
+              </p>
+              <!-- <a class="text-indigo-500 inline-flex modal-btn">
+                <button
+                  style="font-size: 16px"
+                  class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg"
+                >
+                  Details
+                </button></a
+              > -->
+            </div>
+          </div>
+          <div class="flex flex-col mb-10 lg:items-start items-center">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+                Company Specific Recruiments
+              </h2>
+              <p class="leading-relaxed text-base">
+                Delve into tailored opportunities with renowned organizations at
+                our company-specific hiring sessions. Dive deep into company
+                cultures, understand specific job roles, and showcase your
+                skills.
+              </p>
+              <!-- <a class="text-indigo-500 inline-flex modal-btn">
+                <button
+                  style="font-size: 16px"
+                  class="flex mx-auto mt-4 text-white bg-red-700 border-0 py-1 px-6 focus:outline-none hover:bg-red-800 rounded text-lg"
+                >
+                  Details
+                </button></a
+              > -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-gray-600 body-font">
+      <h1 class="text-center heading2 text-gray-900 rdc">
+        Explore Our Recruitment Drive With These Photo Highlights
+      </h1>
+
+      <div class="container px-5 py-4 mx-auto flex flex-wrap">
+        <div class="flex flex-wrap md:-m-2 -m-1">
+          <div class="flex flex-wrap w-1/2">
+            <div class="md:p-2 p-1 w-1/2">
+              <img
+                alt="gallery"
+                class="w-full object-cover h-full object-center block"
+                src="images/rd1.jpg"
+              />
+            </div>
+            <div class="md:p-2 p-1 w-1/2">
+              <img
+                alt="gallery"
+                class="w-full object-cover h-full object-center block"
+                src="images/rd2.jpg"
+              />
+            </div>
+            <div class="md:p-2 p-1 w-full">
+              <img
+                alt="gallery"
+                class="w-full h-full object-cover object-center block"
+                src="images/rd3.jpg"
+              />
+            </div>
+          </div>
+          <div class="flex flex-wrap w-1/2">
+            <div class="md:p-2 p-1 w-full">
+              <img
+                alt="gallery"
+                class="w-full h-full object-cover object-center block"
+                src="images/rd4.jpg"
+              />
+            </div>
+            <div class="md:p-2 p-1 w-1/2">
+              <img
+                alt="gallery"
+                class="w-full object-cover h-full object-center block"
+                src="images/rd5.jpg"
+              />
+            </div>
+            <div class="md:p-2 p-1 w-1/2">
+              <img
+                alt="gallery"
+                class="w-full object-cover h-full object-center block"
+                src="images/rd6.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Modal -->
+    <!-- <div id="myModal" class="modal">
+
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <section class="text-gray-600 body-font">
+          <div
+            class="container mx-auto flex px-5 py-14 md:flex-row flex-col items-center"
+          >
+            <div
+              style="margin-top: -10%"
+              class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+            >
+              <h1
+                class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 font-bold"
+              >
+                Annual Futsal Tournament 2024
+              </h1>
+
+              <p class="mb-8 leading-relaxed">
+                Copper mug try-hard pitchfork pour-over freegan heirloom neutra
+                air plant cold-pressed tacos poke beard tote bag. Heirloom echo
+                park mlkshk tote bag selvage hot chicken authentic tumeric
+                truffaut hexagon try-hard chambray.
+              </p>
+
+              <h3 class="window_heading">Date: 2nd January 2024</h3>
+              <h3 class="window_heading">Time: 9:30 AM</h3>
+              <h3 class="window_heading">Location: DHA Suffa University</h3>
+
+              <div class="flex justify-center"></div>
+            </div>
+            <div
+              style="margin-top: -2%"
+              class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+            >
+              <img
+                style="border: solid 4px gray"
+                class="object-cover object-center rounded"
+                alt="hero"
+                src="https://th.bing.com/th/id/OIF.H8D1HMizzzxkZ9PiNrHg0Q?rs=1&pid=ImgDetMain"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div> -->
+
+    <div id="abc"><div class="divider"></div></div>
+
+    <section class="text-gray-600 body-font">
+      <div
+        class="container mx-auto flex px-5 py-4 items-center justify-center flex-col"
+      >
+        <div class="text-center lg:w-2/3 w-full">
+          <div
+            style="
+              margin-top: 40px;
+              margin-bottom: 20px;
+              display: flex;
+              justify-content: center;
+            "
+            id="projects"
+            class="circle-text heading1"
+          >
+            <h1 class="text-center heading2 text-gray-900">Counselling</h1>
+            <h1
+              style="color: #a30000; margin-left: 8px"
+              class="text-center heading2 text-gray-900"
+            >
+              Sessions
             </h1>
-            <p class="mb-8 leading-relaxed">Embark on a journey of professional discovery at our next Career Fair, where opportunity and talent converge. Connect with industry leaders, explore diverse career paths, and take a significant step towards your future. Mark your calendars for an event that promises to open doors to numerous possibilities and career advancements</p>
-            <div class="flex justify-center">
-              <button class="inline-flex text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">Register Now</button>
           </div>
+          <p class="mb-8 leading-relaxed">
+            Our university's counseling services offer confidential support to
+            students facing academic, personal, or emotional challenges.
+            Individual counseling sessions are available for personalized
+            assistance with stress, relationships, anxiety, and depression.
+            Additionally, group workshops provide opportunities for peer
+            connections and skill-building in areas such as stress management
+            and communication. In times of crisis, our counselors offer
+            immediate support and intervention. Scheduling appointments is easy
+            and confidential, with same-day options for urgent concerns. We
+            encourage all students to reach out for support whenever needed.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container px-5 py-4 mx-auto flex flex-wrap">
+        <div class="lg:w-2/3 mx-auto">
+          <div
+            class="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4"
+          >
+            <img
+              alt="gallery"
+              class="w-full object-cover h-full object-center block absolute inset-0"
+              src="images/cs1.jpg"
+            />
+          </div>
+          <div class="flex flex-wrap -mx-2">
+            <div class="px-2 w-1/2">
+              <div
+                class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative"
+              >
+                <img
+                  alt="gallery"
+                  class="w-full object-cover h-full object-center block absolute inset-0"
+                  src="images/cs3.jpg"
+                />
+              </div>
+            </div>
+            <div class="px-2 w-1/2">
+              <div
+                class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative"
+              >
+                <img
+                  alt="gallery"
+                  class="w-full object-cover h-full object-center block absolute inset-0"
+                  src="images/cs2.jpg"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <div style="margin-top: 50px" id="abc"><div class="divider"></div></div>
+    <div
+      style="
+        margin-top: 40px;
+        margin-bottom: 2px;
+        display: flex;
+        justify-content: center;
+      "
+      id="projects"
+      class="circle-text heading1"
+    >
+      <h2 class="text-center text-gray-900 evnts">Career</h2>
+      <h2
+        style="color: #a30000; margin-left: 8px"
+        class="text-center text-gray-900 evnts"
+      >
+        Fair
+      </h2>
+    </div>
 
+    <section style="margin-bottom: 60px" class="text-gray-600 body-font m-2">
+      <div
+        class="container mx-auto flex px-5 py-14 md:flex-row flex-col items-center"
+      >
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          <img
+            class="object-cover object-center rounded"
+            alt="hero"
+            src="https://szabist-isb.edu.pk/wp-content/uploads/2020/06/jobfair.jpg"
+          />
+        </div>
+        <div
+          class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
+        >
+          <h1
+            class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
+          >
+            Join Us in Our Next Career Fair
+          </h1>
+          <p class="mb-8 leading-relaxed">
+            Explore boundless opportunities at our upcoming University Career
+            Fair! Join us for an incredible chance to connect with prospective
+            employers, discover various career paths, and make meaningful
+            connections. Whether you're a student eager to kickstart your
+            professional journey or an alum looking for new opportunities, our
+            Career Fair is the perfect platform to engage with recruiters and
+            explore your next steps.
+          </p>
+          <div class="flex justify-center">
+            <a href="careerfair.html">
+              <button
+                class="inline-flex text-white bg-red-700 border-0 py-2 px-6 focus:outline-none hover:bg-red-800 rounded text-lg"
+              >
+                Career Fair
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <div style="margin-bottom: 50px;" id="abc">   <div class="divider"></div></div>
-   
-      <footer style="background-color: rgb(131, 0, 0);color: white;" class=" body-font">
-        <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-          <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-            <a class="flex title-font font-medium items-center md:justify-start justify-center ">
-              <img style="height:50px ; width:50px ;" src="images/favicon.jpg" alt="">
-              <span class="ml-3 text-xl">DHA Suffa University</span>
+    <div style="margin-bottom: 50px" id="abc"><div class="divider"></div></div>
+
+    <footer
+      style="background-color: rgb(131, 0, 0); color: white"
+      class="body-font"
+    >
+      <div style="background-color: rgb(122, 0, 0); color: white">
+        <div
+          class="container mx-auto py-8 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <p class="text-sm text-center sm:text-left">
+            © 2024 —
+            <a
+              rel="noopener noreferrer"
+              class="ml-1 social-btn1"
+              target="_blank"
+              >@DHA Suffa University</a
+            >
+          </p>
+          <span
+            class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
+          >
+            <a
+              class="social-btn1"
+              href="https://www.facebook.com/dha.suffa?mibextid=YMEMSu"
+            >
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                ></path>
+              </svg>
             </a>
-            <p class="mt-2 text-sm ">Career Services and Corporate Relations Office</p>
-          </div>
-          <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium  tracking-widest text-sm mb-3 text-gray-200">Resources</h2>
-                <li>
-                  <a href="resources/dsu-2018-internship-application-form.pdf" class="hover:text-gray-800">Internship application form</a>
-                </li>
-                <li>
-                  <a href="resources/Internship-Report-Draft.docx" class="hover:text-gray-800">Internship Report Draft</a>
-                </li>
-                <li>
-                  <a href="resources/Student-Evaluation-Regarding-Internship.pdf" class="hover:text-gray-800">Student Evaluation</a>
-                </li>
-                <li>
-                  <a href="resources/Supervisor-Evaluation-form.docx" class="hover:text-gray-800">Supervisor Evaluation</a>
-                </li>
-                <li>
-                  <a href="resources/Template-CV.doc" class="hover:text-gray-800">CV Template <a href="https://www.example.com" class="hover:text-gray-800">First Link</a></a>
-                </li>
-              </nav>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium  tracking-widest text-sm mb-3"></h2>
-              <nav class="list-none mb-10 mt-10">
-                <li>
-                  <a href="index.html" class="hover:text-gray-800">Home</a>
-                </li>
-                <li>
-                  <a href="about.html" class="hover:text-gray-800">About Us</a>
-                </li>
-                <li>
-                  <a href="services.html" class="hover:text-gray-800">Services</a>
-                </li>
-                <li>
-                  <a href="resources.html" class="hover:text-gray-800">Resources</a>
-                </li>
-              </nav>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium  tracking-widest text-sm mb-3"></h2>
-              <nav class="list-none mb-10 mt-10">
-                <li>
-                  <a href="contact.html" class="hover:text-gray-800">Contact Us</a>
-                </li>
-                <li>
-                  <a href="form.html" class="hover:text-gray-800">Login</a>
-                </li>
-                <li>
-                  <a href="job.html" class="hover:text-gray-800">Job Portal</a>
-                </li>
-              </nav>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium tracking-widest text-sm mb-3 text-gray-200">Get in touch with us</h2>
-              <nav class="list-none mb-10">
-                  <li>
-                      <i class="fas fa-map-marker-alt"></i>
-                      <a href="#map-location" class="hover:text-gray-800">DHA Suffa University, DHA Phase 7 Ext, Karachi</a>
-                  </li>
-                  <li>
-                      <i class="fas fa-phone"></i>
-                      <a href="tel:+1234567890" class="hover:text-gray-800">(021)35244851 Ext:180</a>
-                  </li>
-                  <li>
-                      <i class="fas fa-envelope"></i>
-                      <a href="mailto:info@example.com" class="hover:text-gray-800">cscr@dsu.edu.pk</a>
-                  </li>
-              </nav>
-          </div>
-          
-          </div>
+
+            <a
+              class="ml-3 social-btn1"
+              href="https://www.instagram.com/dsu_official?igsh=MWdja2Z5amVqemJ1NA=="
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="ml-3 social-btn1"
+              href="https://www.linkedin.com/school/dha-suffa-university/"
+            >
+              <svg
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="none"
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
         </div>
-        <div style="background-color: rgb(53, 0, 0);color: white;">
-          <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-            <p class=" text-sm text-center sm:text-left">© Copyright - DHA Suffa University -
-              <a  rel="noopener noreferrer" class=" ml-1" target="_blank">Website by Fahad-Ibtisam-Ibad</a>
-            </p>
-            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            </span>
-          </div>
-        </div>
-      </footer>
-
-      <script>
-        // Function to scroll to the top of the page
-function scrollToTop() {
-    const duration = 500;
-    const startingYOffset = window.pageYOffset;
-    const startTime = performance.now();
-
-    function scrollStep(timestamp) {
-        const elapsedTime = timestamp - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
-        window.scrollTo(0, startingYOffset * (1 - progress));
-
-        if (progress < 1) {
-            requestAnimationFrame(scrollStep);
-        }
-    }
-
-    requestAnimationFrame(scrollStep);
-}
-
-// Show/hide the "Go to Top" button based on scroll position
-window.addEventListener("scroll", function() {
-    const scrollButton = document.querySelector(".scroll-to-top");
-    if (window.pageYOffset > 300) {
-        scrollButton.style.display = "block";
-    } else {
-        scrollButton.style.display = "none";
-    }
-});
-
-
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get all buttons with the common class
-var buttons = document.getElementsByClassName("modal-btn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// Function to open the modal
-function openModal() {
-  modal.style.display = "block";
-}
-
-// Function to close the modal
-function closeModal() {
-  modal.style.display = "none";
-}
-
-// Attach click event handlers to all buttons
-for (var i = 0; i < buttons.length; i++) {
-  buttons[i].onclick = openModal;
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = closeModal;
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    closeModal();
-  }
-}
-
-
-      </script>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
